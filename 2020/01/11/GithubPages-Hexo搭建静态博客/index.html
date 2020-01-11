@@ -5,12 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>一个菜鸡刚建的博客</title>
+    <title>GithubPages+Hexo搭建静态博客 - 一个菜鸡刚建的博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="liletian,"> 
-    <meta name="description" content="记录一下大学的学习历程,"> 
+    <meta name="description" content="记录一下大学的学习历程,第一篇博客当然是用来记录搭建博客的过程辣:yum:
+1.安装Node.js安装Node.js环境
+安装完毕后在命令行中检查版本，输入
+1npm -v
+
+出现版本号证明安装成功
+2.安装Git安装Gi,"> 
     <meta name="author" content="Letian"> 
     <link rel="alternative" href="atom.xml" title="一个菜鸡刚建的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -35,72 +41,94 @@
 <body class="loading">
     <span id="config-title" style="display:none">一个菜鸡刚建的博客</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/li-letian" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2020 Letian.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a>
-        by Fechin
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
-    </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://li-letian.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">GithubPages+Hexo搭建静态博客</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
         <div>
-            <a class="image-logo" href="/"></a>
-            <div class="icon-menu switchmenu"></div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
-    
-    <div id="post0">
-        <p>一月 11, 2020</p>
-        <h2><a href="/2020/01/11/GithubPages-Hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" title="GithubPages+Hexo搭建静态博客" class="posttitle">GithubPages+Hexo搭建静态博客</a></h2>
-        <p class="summary">第一篇博客当然是用来记录搭建博客的过程辣:yum:
-1.安装Node.js安装Node.js环境
-安装完毕后在命令...</p>
-    </div>
-    
+    <div class="scrollbar"></div>
 </div>
 
-    <div id="primary">
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">GithubPages+Hexo搭建静态博客</h1>
+        <div class="stuff">
+            <span>一月 11, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p>第一篇博客当然是用来记录搭建博客的过程辣:yum:</p>
+<h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h2><p>安装<a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>环境</p>
+<p>安装完毕后在命令行中检查版本，输入</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> -v</span><br></pre></td></tr></table></figure>
+
+<p>出现版本号证明安装成功</p>
+<h2 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h2><p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>或者<a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a></p>
+<p><del>这部分真是个大坑啊以后慢慢填吧</del></p>
+<p>详细用法后面会单独写一个博客说明</p>
+<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><p>在命令行中输入</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
         
-<div class="post">
-    <a href="/2019/12/29/hello-world/" title="Hello World">
-        <img src="/img/cover.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>十二月 29, 2019</p>
-        <h3><a href="/2019/12/29/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3>
-        <p>Welcome to Hexo! This is your very first post. Check documentation for more i...</p>
-    </div>
-</div>
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
 
 
     </div>
     
 </div>
-<div id="preview"></div>
 
+
+    </div>
+</div>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
