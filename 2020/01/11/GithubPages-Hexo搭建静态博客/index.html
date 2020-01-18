@@ -13,8 +13,10 @@
     <meta name="description" content="记录一下大学的学习历程,第一篇博客当然是用来记录搭建博客的过程辣😄
 
 我们采用GitHub Pages+Hexo+Typora来完成整个博客的搭建、运行和创作
-GitHub Pages提供静态博客的远程服务器
-Hexo提,"> 
+整个过程需要以下一些软件、插件或者网站的支持
+
+
+GitHu,"> 
     <meta name="author" content="Letian"> 
     <link rel="alternative" href="atom.xml" title="一个菜鸡刚建的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -69,46 +71,96 @@ Hexo提,">
 
         </div>
         <div class="content markdown">
-            <p><strong>第一篇博客当然是用来记录搭建博客的过程辣😄</strong></p>
+            <h5 id="第一篇博客当然是用来记录搭建博客的过程辣😄"><a class="header-anchor" href="#第一篇博客当然是用来记录搭建博客的过程辣😄"></a>第一篇博客当然是用来记录搭建博客的过程辣😄</h5>
 <a id="more"></a>
-<p>我们采用GitHub Pages+Hexo+Typora来完成整个博客的搭建、运行和创作</p>
-<p>GitHub Pages提供静态博客的远程服务器</p>
-<p>Hexo提供博客网页文件的生成和预览</p>
-<p>Typora提供优秀的markdown写作环境</p>
+<p>我们采用<code>GitHub Pages</code>+<code>Hexo</code>+<code>Typora</code>来完成整个博客的搭建、运行和创作</p>
+<h4 id="整个过程需要以下一些软件、插件或者网站的支持"><a class="header-anchor" href="#整个过程需要以下一些软件、插件或者网站的支持"></a>整个过程需要以下一些软件、插件或者网站的支持</h4>
+<ol>
+<li>
+<p><code>GitHub Pages</code>提供静态博客的远程服务器</p>
+</li>
+<li>
+<p><code>Node.js</code>提供<code>Hexo</code>运行环境和更多功能的插件扩展</p>
+</li>
+<li>
+<p><code>Git</code>提供<code>Hexo</code>提交文件并部署到<code>GitHub Pages</code>功能</p>
+</li>
+<li>
+<p><code>Hexo</code>提供博客网页文件的生成和预览</p>
+</li>
+<li>
+<p><code>Typora</code>提供优秀的<code>markdown</code>写作环境</p>
+</li>
+</ol>
 <p>全程免费稳定，自定义程度极高 <s>(只要你JavaScript写的够溜)</s></p>
-<p>最终生成的博客网址是 <strong><a href="http://xn--GitHub-on9im33ani7aou3bged.github.io" target="_blank" rel="noopener">你的GitHub用户名.github.io</a></strong></p>
-<h2 id="1-安装Node-js"><a class="header-anchor" href="#1-安装Node-js"></a>1.安装Node.js</h2>
-<p>安装<a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>环境和npm模块</p>
+<p>最终生成的博客网址是 <code>你的GitHub用户名.github.io</code>，或者绑定自己的域名</p>
+<h2 id="1-安装Node-js"><a class="header-anchor" href="#1-安装Node-js"></a>1.安装<code>Node.js</code></h2>
+<p>安装<a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>环境并在Path中添加环境变量</p>
+<p><s>真是个大坑啊以后慢慢填吧</s></p>
+<p>详细用法后面会单独写一个博客说明</p>
 <p>安装完毕后在命令行中检查版本，输入</p>
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> -v</span><br></pre></td></tr></table></figure>
 <p>出现版本号证明安装成功</p>
-<h2 id="2-安装Git"><a class="header-anchor" href="#2-安装Git"></a>2.安装Git</h2>
-<p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>或者<a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a></p>
+<h2 id="2-安装Git并配置SSH-key"><a class="header-anchor" href="#2-安装Git并配置SSH-key"></a>2.安装<code>Git</code>并配置<code>SSH key</code></h2>
+<p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>并Path中添加环境变量</p>
 <p><s>真是个大坑啊以后慢慢填吧</s></p>
 <p>详细用法后面会单独写一个博客说明</p>
-<h2 id="3-安装Hexo"><a class="header-anchor" href="#3-安装Hexo"></a>3.安装Hexo</h2>
+<p>然后需要配置电脑本机的<code>SSH key</code>到你的<code>GitHub</code>账号</p>
+<h2 id="3-安装Hexo"><a class="header-anchor" href="#3-安装Hexo"></a>3.安装<code>Hexo</code></h2>
 <p>在命令行中输入</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
 <p>安装完毕后在命令行中检查版本，输入</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo -v</span></span><br></pre></td></tr></table></figure>
 <p>出现版本号证明安装成功</p>
 <h2 id="4-建站"><a class="header-anchor" href="#4-建站"></a>4.建站</h2>
-<p>在GitHub上new一个名为yourusername.github.io的repository</p>
-<p>记得一定一定要命名为==<strong><a href="http://xn--GitHub-on9im33ani7aou3bged.github.io" target="_blank" rel="noopener">你的GitHub用户名.github.io</a></strong>==的形式</p>
-<p>然后用Git或者GitHub Desktop把仓库clone到本地</p>
+<p>在``GitHub<code>上new一个名为</code>yourusername.github.io`的repository</p>
+<p>记得一定一定要命名为<code>你的GitHub用户名.github.io</code>的形式</p>
+<p>然后用<code>Git</code>或者<code>GitHub Desktop</code>把仓库clone到本地的一个你习惯的路径，这里就是你以后存储博文的地方</p>
 <p>在此路径建站，命令行输入</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
-<p>然后将__config中的配置更改为你需要的相应的配置</p>
+<p>然后将<code>__config</code>中的配置更改为相应的配置</p>
+<p>最重要的是后面的<code>deploy</code>配置，一定要改为<code>git</code>和你GitHub Pages仓库ssh</p>
 <p>具体配置的更改参见<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">HexoDocs</a></p>
 <h2 id="5-选择主题"><a class="header-anchor" href="#5-选择主题"></a>5.选择主题</h2>
-<p>Hexo的默认主题是landscape</p>
+<p><code>Hexo</code>的默认主题是<code>landscape</code>，当然非常难看了</p>
 <p>你可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">HexoThemes</a>选择一个喜欢的主题</p>
-<p>然后进入作者的GitHub repository把他clone下来</p>
-<p>然后放入博客文件夹中的themes中，然后更改相应的配置</p>
-<h2 id="6-日常写作"><a class="header-anchor" href="#6-日常写作"></a>6.日常写作</h2>
+<p>进入作者的GitHub repository然后把主题clone下来</p>
+<p>然后放入博客文件夹中的themes中</p>
+<p>通过更改相应主题文件夹下的<code>__config</code>中相应的配置可以有更多的玩法</p>
+<p>我使用的主题是<a href="https://github.com/Fechin/hexo-theme-diaspora" target="_blank" rel="noopener">Diaspora</a></p>
+<p>里面集成了一些例如<code>Gitalk</code>等其他的<code>Hexo</code>插件</p>
+<p>更改了主题后就可以生成网页预览并部署到远程了</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g<span class="comment">//将你的所有文件和配置生成网页</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s<span class="comment">//预览网页</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d<span class="comment">//部署到远端</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-绑定域名"><a class="header-anchor" href="#6-绑定域名"></a>6.绑定域名</h2>
+<p>这一步是可选操作</p>
+<p>最终的博客网址是 <code>你的GitHub用户名.github.io</code></p>
+<p>我们如果有自己的域名的话可以选择绑定自己的域名</p>
+<p>我的域名<code>letian.website</code>是在腾讯云购买的，并且我觉得它用于搭建个人网站或者个人邮箱非常的合适，价格也很实惠</p>
+<p><s>根本买不起.com和.cn这种超级贵的域名</s></p>
+<p>在腾讯云查询域名注册并经过漫长的精挑细选再下单支付，最后实名认证后就可以进行绑定了</p>
+<p>首先在博客文件夹根目录的<code>sourse</code>中增加一个无后缀的名为<code>CNAME</code>的文件，并用<code>notepad++</code>或<code>vscode</code>类的编辑器写入你的域名，例如<code>letian.website</code></p>
+<p>然后在你购买域名的相应的域名管理网页增加两条域名解析</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 其余默认</span><br></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 其余默认</span><br></pre></td></tr></table></figure>
+<p>要过上10分钟才能成功访问，别急哦</p>
+<p>如果还是显示不了或者乱跳转，八成是以前进入本域名的自动跳转缓存没有清除，在浏览器中选择清除最近一段时间的缓存再访问即可</p>
+<h2 id="7-日常写作"><a class="header-anchor" href="#7-日常写作"></a>7.日常写作</h2>
 <p>在命令行运行相应的<a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">HexoDocs</a>中的命令即可生成相应文件</p>
 <p>建议使用Typora搭配图床写作</p>
 <p>最后记得部署到远程仓库即可</p>
+<h2 id="8-增加CDN"><a class="header-anchor" href="#8-增加CDN"></a>8.增加CDN</h2>
+<p>众所周知，GitHub的服务器在国外，由于一些奇怪的原因，国内访问速度非常的堪忧</p>
+<p>所以我们可以采用CDN来完成访问加速</p>
+<p>首先你要选一个合适的CDN，我还是用腾讯了</p>
+<p><s>因为腾讯CDN每个月可以白嫖10G流量，对于个人博客来说足够了</s></p>
+<p>如果选择腾讯CDN，就要在购买域名的地方把域名备案</p>
+<p>其实国内的CDN都要求域名备案，而使用国外的CDN又违背了我们加速国内访问的初衷，所以作为遵纪守法的好公民，我们还是给域名备案一下</p>
+<p>备案完成后就可以去腾讯云开通CDN了</p>
+<h2 id="9-配置Gitalk"><a class="header-anchor" href="#9-配置Gitalk"></a>9.配置<code>Gitalk</code></h2>
+<h2 id="10-更换Hexo渲染引擎"><a class="header-anchor" href="#10-更换Hexo渲染引擎"></a>10.更换<code>Hexo</code>渲染引擎</h2>
+<h2 id="11-更换主题默认音乐和图片"><a class="header-anchor" href="#11-更换主题默认音乐和图片"></a>11.更换主题默认音乐和图片</h2>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
@@ -139,7 +191,7 @@ Hexo提,">
     </div>
     
         <div class='side'>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装Node-js"><span class="toc-number">1.</span> <span class="toc-text">1.安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装Git"><span class="toc-number">2.</span> <span class="toc-text">2.安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装Hexo"><span class="toc-number">3.</span> <span class="toc-text">3.安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-建站"><span class="toc-number">4.</span> <span class="toc-text">4.建站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-选择主题"><span class="toc-number">5.</span> <span class="toc-text">5.选择主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-日常写作"><span class="toc-number">6.</span> <span class="toc-text">6.日常写作</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#第一篇博客当然是用来记录搭建博客的过程辣😄"><span class="toc-number">1.</span> <span class="toc-text">第一篇博客当然是用来记录搭建博客的过程辣😄</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#整个过程需要以下一些软件、插件或者网站的支持"><span class="toc-number"></span> <span class="toc-text">整个过程需要以下一些软件、插件或者网站的支持</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装Node-js"><span class="toc-number"></span> <span class="toc-text">1.安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装Git并配置SSH-key"><span class="toc-number"></span> <span class="toc-text">2.安装Git并配置SSH key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装Hexo"><span class="toc-number"></span> <span class="toc-text">3.安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-建站"><span class="toc-number"></span> <span class="toc-text">4.建站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-选择主题"><span class="toc-number"></span> <span class="toc-text">5.选择主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-绑定域名"><span class="toc-number"></span> <span class="toc-text">6.绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-日常写作"><span class="toc-number"></span> <span class="toc-text">7.日常写作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-增加CDN"><span class="toc-number"></span> <span class="toc-text">8.增加CDN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-配置Gitalk"><span class="toc-number"></span> <span class="toc-text">9.配置Gitalk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-更换Hexo渲染引擎"><span class="toc-number"></span> <span class="toc-text">10.更换Hexo渲染引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-更换主题默认音乐和图片"><span class="toc-number"></span> <span class="toc-text">11.更换主题默认音乐和图片</span></a>
         </div>
     
 </div>
