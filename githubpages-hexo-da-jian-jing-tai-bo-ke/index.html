@@ -31,7 +31,7 @@ Nod">
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -323,7 +323,7 @@ Nod">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-01-24
+                    2020-01-28
                 </div>
                 
 
@@ -361,7 +361,8 @@ Nod">
 <p>安装<a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>环境并在Path中添加环境变量</p>
 <p>具体教程见<a href="https://www.cnblogs.com/zhouyu2017/p/6485265.html" target="_blank" rel="noopener">链接</a></p>
 <p>安装完毕后在命令行中检查版本，输入</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> -v</span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">npm -v
+</code></pre>
 <p>出现版本号证明安装成功</p>
 <h2 id="2-安装Git并配置SSH-key"><a class="header-anchor" href="#2-安装Git并配置SSH-key"></a>2.安装<code>Git</code>并配置<code>SSH key</code></h2>
 <p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>并在Path中添加环境变量</p>
@@ -369,19 +370,23 @@ Nod">
 <p>具体教程见<a href="https://www.cnblogs.com/mingyue5826/p/11141324.html" target="_blank" rel="noopener">链接</a></p>
 <h2 id="3-安装Hexo"><a class="header-anchor" href="#3-安装Hexo"></a>3.安装<code>Hexo</code></h2>
 <p>在命令行中输入</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">npm install hexo-cli -g
+</code></pre>
 <p>安装完毕后在命令行中检查版本，输入</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo -v</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">hexo -v
+</code></pre>
 <p>出现版本号证明安装成功</p>
 <p>接下来安装<code>hexo-deployer-git</code>插件</p>
 <p>在命令行输入以下命令</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">npm install hexo-deployer-git --save
+</code></pre>
 <h2 id="4-建站"><a class="header-anchor" href="#4-建站"></a>4.建站</h2>
 <p>在<code>GitHub</code>上new一个名为<code>yourusername.github.io</code>的repository</p>
 <p>记得一定一定要命名为<code>你的GitHub用户名.github.io</code>的形式</p>
 <p>然后用<code>Git</code>或者<code>GitHub Desktop</code>把仓库clone到本地的一个你习惯的路径，这里就是你以后存储博文的地方</p>
 <p>在此路径建站，命令行输入</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">hexo init
+</code></pre>
 <p>然后将<code>__config</code>中的配置更改为相应的配置</p>
 <p>最重要的是后面的<code>deploy</code>配置，一定要改为<code>git</code>和你GitHub Pages仓库ssh</p>
 <p>具体配置的更改参见<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">HexoDocs</a></p>
@@ -394,9 +399,15 @@ Nod">
 <p>我使用的主题是<a href="https://github.com/Fechin/hexo-theme-diaspora" target="_blank" rel="noopener">Diaspora</a></p>
 <p>里面集成了一些例如<code>Gitalk</code>等其他的<code>Hexo</code>插件</p>
 <p>更改了主题后就可以生成网页预览并部署到远程了</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g<span class="comment">//将你的所有文件和配置生成网页</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s<span class="comment">//预览网页</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d<span class="comment">//部署到远端</span></span><br></pre></td></tr></table></figure>
+<p>将你的所有文件和配置生成网页</p>
+<pre class=" language-language-bash"><code class="language-language-bash">hexo g
+</code></pre>
+<p>预览网页</p>
+<pre class=" language-language-bash"><code class="language-language-bash">hexo s
+</code></pre>
+<p>部署到GitHub</p>
+<pre class=" language-language-bash"><code class="language-language-bash">hexo d
+</code></pre>
 <h2 id="6-绑定域名"><a class="header-anchor" href="#6-绑定域名"></a>6.绑定域名</h2>
 <p>这一步是可选操作</p>
 <p>最终的博客网址是 <code>你的GitHub用户名.github.io</code></p>
@@ -406,8 +417,10 @@ Nod">
 <p>在腾讯云查询域名注册并经过漫长的精挑细选再下单支付，最后实名认证后就可以进行绑定了</p>
 <p>首先在博客文件夹根目录的<code>sourse</code>中增加一个无后缀的名为<code>CNAME</code>的文件，并用<code>notepad++</code>或<code>vscode</code>类的编辑器写入你的域名，例如<code>letian.website</code></p>
 <p>然后在你购买域名的相应的域名管理网页增加两条域名解析</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 其余默认</span><br></pre></td></tr></table></figure>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 其余默认</span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">@ CNAME 线路默认 GitHubPages仓库名 其余默认
+</code></pre>
+<pre class=" language-language-bash"><code class="language-language-bash">www CNAME 线路默认 GitHubPages仓库名 其余默认
+</code></pre>
 <p>要过上10分钟才能成功访问，别急哦</p>
 <p>如果还是显示不了或者乱跳转，八成是以前进入本域名的自动跳转缓存没有清除，在浏览器中选择清除最近一段时间的缓存再访问即可</p>
 <h2 id="7-日常写作"><a class="header-anchor" href="#7-日常写作"></a>7.日常写作</h2>
@@ -421,8 +434,10 @@ Nod">
 <p>因此我们选用<code>BNXB</code>并通过国内的<code>DNS</code>解析服务商将域名解析到<code>Cloudflare</code>的<code>CDN</code></p>
 <p>首先到<code>Cloudflare</code>注册账号，绑定域名并选用免费套餐，验证邮件</p>
 <p>然后到<code>BNXB</code>通过刚刚注册的账号登录，并选用<code>CNAME</code>方式接入，然后在<code>BNXB</code>的解析记录中添加</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 CDN开启 其余默认</span><br></pre></td></tr></table></figure>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www <span class="keyword">CNAME</span> 线路默认 GitHubPages仓库名 CDN开启  其余默认</span><br></pre></td></tr></table></figure>
+<pre class=" language-language-bash"><code class="language-language-bash">@ CNAME 线路默认 GitHubPages仓库名 CDN开启 其余默认
+</code></pre>
+<pre class=" language-language-bash"><code class="language-language-bash">www CNAME 线路默认 GitHubPages仓库名 CDN开启  其余默认
+</code></pre>
 <p>然后将底下生成的域名<code>DNS</code>处<code>CNAME</code>记录对应的记录粘贴到购买域名网页的域名解析中，更改原有的直接解析</p>
 <p>这样就完成了跳转解析</p>
 <p>具体教程见<a href="https://blog.xmgspace.me/archives/cf-custom-ip.html" target="_blank" rel="noopener">链接</a></p>
@@ -522,40 +537,55 @@ Nod">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/letian-s-blog/">
+                <a href="/githubpages-hexo-da-jian-jing-tai-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Letian's Blog">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="GithubPages+Hexo搭建静态博客">
                         
-                        <span class="card-title">Letian's Blog</span>
+                        <span class="card-title">GithubPages+Hexo搭建静态博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            欢迎您的到来
-这里主要记录一下我大学期间的技术学习
-友链
-aosiweixin
+                            第一篇博客当然是用来记录搭建博客的过程辣😄
+我们采用GitHub Pages+Hexo+Typora来完成整个博客的搭建、运行和创作
+整个过程需要以下一些软件、插件或者网站的支持
 
+GitHub Pages提供静态博客的远程服务器
+Nod
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2048-06-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-11
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Letian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    搭建博客
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
+                    </a>
+                    
                 </div>
                 
             </div>
