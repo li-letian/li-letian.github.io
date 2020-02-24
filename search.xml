@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>国际跳棋AI</title>
+      <link href="/guojitiaoqiai/"/>
+      <url>/guojitiaoqiai/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-BVIupOSM" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="19945727" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><p>大一上学期作业项目，用C语言实现一个有一定棋力的国际跳棋AI。</p><p>首先：<s>传  统  艺  能</s></p><blockquote><p>：建议雇一批人日夜破坏嘉定电网</p><p>：建议连夜盗取某曾姓dl的代码</p><p>：大家好，我叫zch。其实我叫什么名字并不重要，你叫我神也可以，叫我渣男也可以，反正你知道我是同济大学2019级新生院最牛B的那个人就可以了。</p><footer><strong>dl们</strong><cite><a href="https://www.zhihu.com/question/354470595/answer/926539077" target="_blank" rel="noopener">刚学了2个月C语言的萌新如何写出国际跳棋程序？</a></cite></footer></blockquote><p>好了进入正题：</p><h2 id="游戏规则与平台说明"><a class="header-anchor" href="#游戏规则与平台说明"></a>游戏规则与平台说明</h2><h2 id="成绩"><a class="header-anchor" href="#成绩"></a>成绩</h2><p>在dl们更新代码的间隙体验了一把榜一，蛮爽的。</p><p><a href="/img/loading4.gif" data-fancybox="group" data-caption="undefined" class="fancybox"><img data-src="https://pic.downk.cc/item/5e537b096127cc07136f68f1.png" src="/img/loading4.gif" class="lazyload"></a>&gt;</p><p>最终Rank11，比较菜。</p><h2 id="思路"><a class="header-anchor" href="#思路"></a>思路</h2><h2 id="储存与着法"><a class="header-anchor" href="#储存与着法"></a>储存与着法</h2><h2 id="搜索与剪枝"><a class="header-anchor" href="#搜索与剪枝"></a>搜索与剪枝</h2><h2 id="主要变例与迭代加深"><a class="header-anchor" href="#主要变例与迭代加深"></a>主要变例与迭代加深</h2><h2 id="PVS"><a class="header-anchor" href="#PVS"></a>PVS</h2><h2 id="心路历程"><a class="header-anchor" href="#心路历程"></a>心路历程</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机博弈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> game </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用Vscode+Cmder写代码</title>
       <link href="/vscodecmdershengchanlipeizhi/"/>
       <url>/vscodecmdershengchanlipeizhi/</url>
