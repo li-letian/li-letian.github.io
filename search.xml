@@ -8,9 +8,25 @@
       <link href="/stlxuexibiji/"/>
       <url>/stlxuexibiji/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-syhuNDSq" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28959298" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h3 id="简介"><a class="header-anchor" href="#简介"></a>简介</h3><h3 id="pair"><a class="header-anchor" href="#pair"></a>pair</h3><h3 id="set"><a class="header-anchor" href="#set"></a>set</h3><h3 id="vector"><a class="header-anchor" href="#vector"></a>vector</h3><h3 id="string"><a class="header-anchor" href="#string"></a>string</h3><h3 id="stack"><a class="header-anchor" href="#stack"></a>stack</h3><h3 id="queue"><a class="header-anchor" href="#queue"></a>queue</h3><h3 id="map"><a class="header-anchor" href="#map"></a>map</h3><h3 id="bitset"><a class="header-anchor" href="#bitset"></a>bitset</h3><h3 id="iterator"><a class="header-anchor" href="#iterator"></a>iterator</h3><h3 id="algorithm"><a class="header-anchor" href="#algorithm"></a>algorithm</h3>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-kjEmMots" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28959298" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h3 id="简介"><a class="header-anchor" href="#简介"></a>简介</h3><h3 id="pair"><a class="header-anchor" href="#pair"></a>pair</h3><h3 id="set"><a class="header-anchor" href="#set"></a>set</h3><h3 id="vector"><a class="header-anchor" href="#vector"></a>vector</h3><h3 id="string"><a class="header-anchor" href="#string"></a>string</h3><h3 id="stack"><a class="header-anchor" href="#stack"></a>stack</h3><h3 id="queue"><a class="header-anchor" href="#queue"></a>queue</h3><h3 id="map"><a class="header-anchor" href="#map"></a>map</h3><h3 id="bitset"><a class="header-anchor" href="#bitset"></a>bitset</h3><h3 id="iterator"><a class="header-anchor" href="#iterator"></a>iterator</h3><h3 id="algorithm"><a class="header-anchor" href="#algorithm"></a>algorithm</h3>]]></content>
       
       
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> acm </tag>
+            
+            <tag> stl </tag>
+            
+        </tags>
       
     </entry>
     
@@ -21,38 +37,14 @@
       <link href="/changyongtulunmoban/"/>
       <url>/changyongtulunmoban/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-gqEMiSkh" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="21255837" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h3 id="最短路"><a class="header-anchor" href="#最短路"></a>最短路</h3><h3 id="第k短路"><a class="header-anchor" href="#第k短路"></a>第k短路</h3><h3 id="最小生成树"><a class="header-anchor" href="#最小生成树"></a>最小生成树</h3><h3 id="次小生成树"><a class="header-anchor" href="#次小生成树"></a>次小生成树</h3><h3 id="曼哈顿最小生成树"><a class="header-anchor" href="#曼哈顿最小生成树"></a>曼哈顿最小生成树</h3><h3 id="欧拉路径"><a class="header-anchor" href="#欧拉路径"></a>欧拉路径</h3><h3 id="dag的深度优先搜索标记"><a class="header-anchor" href="#dag的深度优先搜索标记"></a>dag的深度优先搜索标记</h3><h3 id="割点、桥、双连通分量"><a class="header-anchor" href="#割点、桥、双连通分量"></a>割点、桥、双连通分量</h3><h3 id="无向图桥"><a class="header-anchor" href="#无向图桥"></a>无向图桥</h3><h3 id="无向图割"><a class="header-anchor" href="#无向图割"></a>无向图割</h3><h3 id="最大团"><a class="header-anchor" href="#最大团"></a>最大团</h3><h3 id="最小树形图"><a class="header-anchor" href="#最小树形图"></a>最小树形图</h3><h3 id="带花树"><a class="header-anchor" href="#带花树"></a>带花树</h3><h3 id="生成树计数"><a class="header-anchor" href="#生成树计数"></a>生成树计数</h3>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>常用数据结构模板</title>
-      <link href="/changyongshujujiegoumoban/"/>
-      <url>/changyongshujujiegoumoban/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-PqQIIVSb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="25787216" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>常用字符串算法模板</title>
-      <link href="/changyongzifuchuansuanfamoban/"/>
-      <url>/changyongzifuchuansuanfamoban/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-ovdYgxEh" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1341884585" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h2 id="编辑距离"><a class="header-anchor" href="#编辑距离"></a>编辑距离</h2><h2 id="kmp"><a class="header-anchor" href="#kmp"></a>kmp</h2><h2 id="kmp拓展"><a class="header-anchor" href="#kmp拓展"></a>kmp拓展</h2><h2 id="ac自动机"><a class="header-anchor" href="#ac自动机"></a>ac自动机</h2><h2 id="后缀数组"><a class="header-anchor" href="#后缀数组"></a>后缀数组</h2><h2 id="后缀自动机"><a class="header-anchor" href="#后缀自动机"></a>后缀自动机</h2><h2 id="hash"><a class="header-anchor" href="#hash"></a>hash</h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-WjlNhXIu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="21255837" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h3 id="最短路"><a class="header-anchor" href="#最短路"></a>最短路</h3><h3 id="第k短路"><a class="header-anchor" href="#第k短路"></a>第k短路</h3><h3 id="最小生成树"><a class="header-anchor" href="#最小生成树"></a>最小生成树</h3><h3 id="次小生成树"><a class="header-anchor" href="#次小生成树"></a>次小生成树</h3><h3 id="曼哈顿最小生成树"><a class="header-anchor" href="#曼哈顿最小生成树"></a>曼哈顿最小生成树</h3><h3 id="欧拉路径"><a class="header-anchor" href="#欧拉路径"></a>欧拉路径</h3><h3 id="dag的深度优先搜索标记"><a class="header-anchor" href="#dag的深度优先搜索标记"></a>dag的深度优先搜索标记</h3><h3 id="割点、桥、双连通分量"><a class="header-anchor" href="#割点、桥、双连通分量"></a>割点、桥、双连通分量</h3><h3 id="无向图桥"><a class="header-anchor" href="#无向图桥"></a>无向图桥</h3><h3 id="无向图割"><a class="header-anchor" href="#无向图割"></a>无向图割</h3><h3 id="最大团"><a class="header-anchor" href="#最大团"></a>最大团</h3><h3 id="最小树形图"><a class="header-anchor" href="#最小树形图"></a>最小树形图</h3><h3 id="带花树"><a class="header-anchor" href="#带花树"></a>带花树</h3><h3 id="生成树计数"><a class="header-anchor" href="#生成树计数"></a>生成树计数</h3>]]></content>
       
       
       <categories>
           
-          <category> 算法竞赛 </category>
+          <category> 算法 </category>
+          
+          <category> 图论 </category>
           
       </categories>
       
@@ -64,6 +56,74 @@
             <tag> c/c++ </tag>
             
             <tag> acm </tag>
+            
+            <tag> graph theory </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用数据结构模板</title>
+      <link href="/changyongshujujiegoumoban/"/>
+      <url>/changyongshujujiegoumoban/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-HChYKUoE" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="25787216" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> acm </tag>
+            
+            <tag> data structure </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用字符串算法模板</title>
+      <link href="/changyongzifuchuansuanfamoban/"/>
+      <url>/changyongzifuchuansuanfamoban/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-DLhBZvJp" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1341884585" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"></div><h2 id="编辑距离"><a class="header-anchor" href="#编辑距离"></a>编辑距离</h2><h2 id="kmp"><a class="header-anchor" href="#kmp"></a>kmp</h2><h2 id="kmp拓展"><a class="header-anchor" href="#kmp拓展"></a>kmp拓展</h2><h2 id="ac自动机"><a class="header-anchor" href="#ac自动机"></a>ac自动机</h2><h2 id="后缀数组"><a class="header-anchor" href="#后缀数组"></a>后缀数组</h2><h2 id="后缀自动机"><a class="header-anchor" href="#后缀自动机"></a>后缀自动机</h2><h2 id="hash"><a class="header-anchor" href="#hash"></a>hash</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+          <category> 字符串 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> acm </tag>
+            
+            <tag> string </tag>
             
         </tags>
       
