@@ -1,19 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>影单 | Letian</title><meta name="description" content="影单"><meta name="keywords" content="李乐天,Letian,letian"><meta name="author" content="Letian"><meta name="copyright" content="Letian"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="影单"><meta name="twitter:description" content="影单"><meta name="twitter:image" content="https://li-letian.github.io/img/avatars.png"><meta property="og:type" content="website"><meta property="og:title" content="影单"><meta property="og:url" content="https://li-letian.github.io/movies/"><meta property="og:site_name" content="Letian"><meta property="og:description" content="影单"><meta property="og:image" content="https://li-letian.github.io/img/avatars.png"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = '1'
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>影单 | Letian</title><meta name="description" content="影单"><meta name="keywords" content="李乐天,Letian,letian"><meta name="author" content="Letian"><meta name="copyright" content="Letian"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="影单"><meta name="twitter:description" content="影单"><meta name="twitter:image" content="https://li-letian.github.io/img/avatars.png"><meta property="og:type" content="website"><meta property="og:title" content="影单"><meta property="og:url" content="https://li-letian.github.io/movies/"><meta property="og:site_name" content="Letian"><meta property="og:description" content="影单"><meta property="og:image" content="https://li-letian.github.io/img/avatars.png"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
 var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
-  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-  const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-  const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-  const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
   if (t === undefined){
     if (isLightMode) activateLightMode()
     else if (isDarkMode) activateDarkMode()
     else if (isNotSpecified || hasNoSupport){
       console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      now = new Date();
-      hour = now.getHours();
-      isNight = hour < 6 || hour >= 18
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
       isNight ? activateDarkMode() : activateLightMode()
   }
   } else if (t == 'light') activateLightMode()
@@ -53,7 +53,6 @@ function activateLightMode(){
     noSupport: '浏览器不支持'
   },
   bookmark: {
-    title: 'Snackbar.bookmark.title',
     message_prev: '按',
     message_next: '键将本页加入书签'
   },
@@ -63,17 +62,26 @@ function activateLightMode(){
   ClickShowText: {"text":"(°ー°〃),(＃°Д°),(。□。),(ノ_<),( ^ω^),(≧ω≦ ),( ΘωΘ),(●′ω`●),(๑￫ܫ￩),(oﾟωﾟo),Σ(°△°)︴,╮(╯▽╰)╭","fontSize":"15px"},
   medium_zoom: false,
   fancybox: true,
-  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-center"},
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-center"},
   baiduPush: true,
   highlightCopy: true,
   highlightLang: true,
-  highlightShrink: false,
-  isFontAwesomeV5: true
+  highlightShrink: 'false',
+  isFontAwesomeV5: true,
+  isPhotoFigcaption: true
   
 }</script><script>var GLOBAL_CONFIG_SITE = { 
   isPost: false,
-  isHome: false
-}</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatars.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="not-index-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Letian</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="page_site-info"><h1 id="site_title">影单</h1></div></div><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><blockquote>
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatars.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="not-index-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Letian</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="page_site-info"><h1 id="site_title">影单</h1></div></div><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><blockquote>
     <p>来康康电影吧</p>
 </blockquote>
 
@@ -162,7 +170,7 @@ function activateLightMode(){
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
        rel="external">
         想看
-        (189)</a>
+        (193)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
        rel="external">
         已看
@@ -182,48 +190,96 @@ function activateLightMode(){
     <div id="hexo-douban-item2">
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2376888099.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2171578110.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/26732514/">事事答是 / Sí a todo</a>
+            <a target="_blank" href="https://movie.douban.com/subject/11540666/">不良教育 第一季 / Bad Education Season 1</a>
         </div>
-        <div class="hexo-douban-meta">2016-02-22 / 安立奎·塞万提斯 / Carlos Soroa / 西班牙 / 罗伯托·佩雷兹·托雷多 / 3分06秒 / 事事答是 / 短片 / 同性 / 罗伯托·佩雷兹·托雷多 Roberto Pérez Toledo / 西班牙语</div>
+        <div class="hexo-douban-meta">2012-08-14 / 杰克·怀特霍尔 / 马修·豪勒 / 莎拉·索蕾玛尼 / 米歇尔·戈麦兹 / 艾登·卡拉翰 / 莱顿·威廉姆斯 / 杰克·本斯 / 妮琪·罗南克莱斯 / 查理·沃纳姆 / 杰克 ·戴维斯 / 英国 / Ben Fuller / 不良教育 / 30分钟 / 不良教育 / 杰克·怀特霍尔 Jack Whitehall / 英语</div>
     </div>
 </div>
 
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2526439599.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2594754124.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/30258787/">体液 / Sweat</a>
+            <a target="_blank" href="https://movie.douban.com/subject/30182877/">坏教育 / Bad Education</a>
         </div>
-        <div class="hexo-douban-meta">2018-05-25(美国) / 德国 / 西班牙 / 诺尔·亚历杭德罗 / 24分钟 / 体液 / 短片 / Noel Alejandro / 英语</div>
+        <div class="hexo-douban-meta">2019-09-08(多伦多电影节) / 2020-04-25(美国) / 休·杰克曼 / 艾莉森·珍妮 / 杰拉尔丁·维斯瓦纳坦 / 亚历克斯·沃尔夫 / 安娜莱吉·阿什福特 / 雷·罗马诺 / 凯瑟琳·纳杜奇 / 吉米·塔特罗 / 凯瑟琳·科廷 / 斯蒂芬·斯皮内拉 / 芬纳蒂·斯蒂夫斯 / 斯蒂芬妮·库尔特祖巴 / 雷·阿布鲁佐 / 帕特·希利 / 凯莉·卡特 / 拉斐尔·卡索 / 桃乐丝·麦卡锡 / 约翰·斯库蒂 / 杰里米·萨默斯 / 彼得·阿佩尔 / 朱塞佩·阿迪佐内 / 威尔·梅耶 / 吉诺·卡法雷利 / 贾斯汀·斯万 / Dina Pearlman / Anthony Belfiore / 美国 / 科瑞·芬莱 / 103分钟 / 坏教育 / 剧情 / 喜剧 / 迈克·马考斯基 Mike Makowsky / 英语</div>
     </div>
 </div>
 
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508845973.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p457521856.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/27615420/">爱上艾略特 / Doing Elliot</a>
+            <a target="_blank" href="https://movie.douban.com/subject/1303145/">薄荷糖 / 박하사탕</a>
         </div>
-        <div class="hexo-douban-meta">2016(美国) / 比利时 / 诺尔·亚历杭德罗 / 21分钟 / 爱上艾略特 / 短片 / 同性 / Noel Alejandro / 英语</div>
+        <div class="hexo-douban-meta">1999-10-14(釜山电影节) / 2000-01-01(韩国) / 薛景求 / 文素丽 / 金汝珍 / 徐情 / 金仁权 / 高瑞熙 / 李代延 / 朴志妍 / 孔炯轸 / 裴长秀 / 刘延洙 / 金敬益 / 池大汉 / 朴成妍 / 姜善淑 / 张浚浩 / 刘承睦 / 韩国 / 日本 / 李沧东 / 130分钟 / 薄荷糖 / 剧情 / 李沧东 Chang-dong Lee / 韩语</div>
     </div>
 </div>
 
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2527088781.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2555295759.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/1941367/">情狱 / Gefangen</a>
+            <a target="_blank" href="https://movie.douban.com/subject/30170448/">何以为家 / كفرناحوم</a>
         </div>
-        <div class="hexo-douban-meta">2004-05-26(德国) / 马塞尔·施卢特 / Peter Maffay / Claudine Wilde / 西蒙·利希特 / 迪特尔·莱瑟 / 罗曼·尼泽卡 / 海科·多伊奇曼 / 彼得·帕扎克 / Adil Abdelwahab / Omar Chenbod / 德国 / 彼得·帕扎克 / 96 分钟 / UK: 92 分钟(cut) / 情狱 / 剧情 / 爱情 / 同性 / Jörg Andreas / Peter Oehl / 德语 / 英语</div>
+        <div class="hexo-douban-meta">2018-05-17(戛纳电影节) / 2018-09-20(黎巴嫩) / 2019-04-29(中国大陆) / 赞恩·阿尔·拉菲亚 / 约丹诺斯·希费罗 / 博鲁瓦蒂夫·特雷杰·班科尔 / 卡萨尔·艾尔·哈达德 / 法迪·尤瑟夫 / 海塔·塞德拉·伊扎姆 / 阿拉·乔什涅 / 娜丁·拉巴基 / 埃利亚斯·库利 / 努尔·艾尔·侯赛尼 / 黎巴嫩 / 法国 / 美国 / 娜丁·拉巴基 / 126分钟 / 117分钟(中国大陆) / 何以为家 / 剧情 / 娜丁·拉巴基 Nadine Labaki / 吉哈德·霍加里 Jihad Hojeily / 米歇尔·凯斯沃尼 Michelle Keserwany / 乔治斯·哈巴兹 Georges Khabbaz / 哈立德·穆扎纳 Khaled Mouzanar / 阿拉伯语 / 阿姆哈拉语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520062851.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/20516903/">同意 / Consentment</a>
+        </div>
+        <div class="hexo-douban-meta">凯文·米兰达 / 法国 / 14分钟 / 同意 / 剧情 / 同性 / Cyril Legann / 法语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2560674586.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30198539/">痛苦与荣耀 / Dolor y gloria</a>
+        </div>
+        <div class="hexo-douban-meta">2019-03-13(马德里首映) / 2019-03-22(西班牙) / 2019-05-17(戛纳电影节) / 安东尼奥·班德拉斯 / 阿谢尔·埃特塞安迪亚 / 莱昂纳多·斯巴拉格利亚 / 诺拉·纳瓦斯 / 胡丽叶塔·塞拉诺 / 塞萨尔·文森特 / 阿瑟·弗洛雷斯 / 佩内洛普·克鲁兹 / 塞西莉亚·罗特 / 苏西·桑切斯 / 劳尔·阿雷瓦洛 / 佩德罗·卡萨布兰科 / 朱利安·洛佩兹 / 伊娃·马丁 / 马里索尔·穆里尔 / 阿古斯丁·阿莫多瓦 / 沃伦·比蒂 / 埃丝特·加西亚 / 米娜 / 玛丽莲·梦露 / 娜塔莉·伍德 / 西班牙 / 法国 / 佩德罗·阿莫多瓦 / 113分钟 / 痛苦与荣耀 / 剧情 / 同性 / 佩德罗·阿莫多瓦 Pedro Almodóvar / 西班牙语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1910921856.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1291878/">不良教育 / La mala educación</a>
+        </div>
+        <div class="hexo-douban-meta">2004-09-16 / 盖尔·加西亚·贝纳尔 / 费莱·马丁内斯 / 丹尼尔·希梅内斯·卡乔 / 路易斯·奥马 / 弗朗西斯科·梅斯特 / 弗郎西斯科·博伊拉 / 胡安·费尔南德斯 / 纳乔·佩雷斯 / 哈维尔·卡马拉 / 阿尔维托·费雷罗 / 佩特拉·马丁内斯 / Roberto Hoyas / 阿古斯丁·阿莫多瓦 / 佩德罗·阿莫多瓦 / 波尔·莫南 / 萨拉·蒙铁儿 / 蕾欧诺·瓦特林 / 何塞·马利亚·亚兹皮克 / 西班牙 / 佩德罗·阿莫多瓦 / 106 分钟 / 不良教育 / 剧情 / 犯罪 / 悬疑 / 惊悚 / 同性 / 佩德罗·阿莫多瓦 Pedro Almodóvar / 西班牙语 / 拉丁语</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1958673368.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1300951/">欲望法则 / La ley del deseo</a>
+        </div>
+        <div class="hexo-douban-meta">1987-03-05 / 欧塞维奥·庞塞拉 / 卡门·毛拉 / 安东尼奥·班德拉斯 / 米格尔·莫利纳 / 费尔南多·古林 / 赫尔曼·科沃斯 / 曼努埃拉·贝拉斯科 / 佩德罗·阿莫多瓦 / 阿古斯丁·阿莫多瓦 / 西班牙 / 佩德罗·阿莫多瓦 / 102 分钟 / 欲望法则 / 剧情 / 爱情 / 同性 / Pedro Almodóvar / 西班牙语</div>
     </div>
 </div>
 
@@ -247,7 +303,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1300486/">忘记她是他 / Different for Girls</a>
         </div>
-        <div class="hexo-douban-meta">1996-11-21 / 斯蒂文·麦金托什 / 米瑞安·玛格莱斯 / 莎卡亚·瑞丝 / 鲁珀特·格雷夫斯 / 英国 / 法国 / 97 分钟 / USA: 92 分钟 / 忘记她是他 / 喜剧 / 爱情 / Tony Marchant / 英语</div>
+        <div class="hexo-douban-meta">1996-11-21 / 斯蒂文·麦金托什 / 米瑞安·玛格莱斯 / 莎卡亚·瑞丝 / 鲁珀特·格雷夫斯 / Stephen Walker / 英国 / 法国 / 97 分钟 / USA: 92 分钟 / 忘记她是他 / 喜剧 / 爱情 / Tony Marchant / 英语</div>
     </div>
 </div>
 
@@ -295,7 +351,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/30252495/">1917</a>
         </div>
-        <div class="hexo-douban-meta">2019-12-25(美国) / 2020-01-10(英国) / 2020(中国大陆) / 乔治·麦凯 / 迪恩·查尔斯·查普曼 / 科林·费尔斯 / 本尼迪克特·康伯巴奇 / 马克·斯特朗 / 理查德·麦登 / 安德鲁·斯科特 / 丹尼尔·梅斯 / 阿德里安·斯卡伯勒 / 约翰·霍林沃思 / 克里斯·瓦利 / 杰米·帕克 / 罗伯特‧马瑟 / 贾斯汀·爱德华兹 / 理查德·麦凯布 / 理查德·德姆西 / 安森·布恩 / 雅各布·詹姆斯·贝西克 / 特蕾莎·马奥尼 / 皮普·卡特 / 保罗·廷托 / 安迪·阿波罗 / 约瑟夫·戴维斯 / 比利·波斯特莱斯韦特 / 加布里埃尔·阿库乌迪克 / 斯派克·莱顿 / 亚当·赫吉尔 / 纳巴汉·里兹万 / 克莱尔·迪比尔克 / 乔纳·罗素 / 迈克尔·吉普森 / 格伦·霍威尔 / 英国 / 美国 / 1917.movie / 萨姆·门德斯 / 119分钟 / 剧情 / 战争 / 萨姆·门德斯 Sam Mendes / 克里斯蒂·威尔逊-凯恩斯 Krysty Wilson-Cairns / 英语 / 法语 / 德语</div>
+        <div class="hexo-douban-meta">2019-12-25(美国) / 2020-01-10(英国) / 2020(中国大陆) / 乔治·麦凯 / 迪恩·查尔斯·查普曼 / 科林·费尔斯 / 本尼迪克特·康伯巴奇 / 马克·斯特朗 / 理查德·麦登 / 安德鲁·斯科特 / 丹尼尔·梅斯 / 阿德里安·斯卡伯勒 / 约翰·霍林沃思 / 克里斯·瓦利 / 杰米·帕克 / 罗伯特‧马瑟 / 贾斯汀·爱德华兹 / 理查德·麦凯布 / 理查德·德姆西 / 安森·布恩 / 雅各布·詹姆斯·贝西克 / 特蕾莎·马奥尼 / 皮普·卡特 / 保罗·廷托 / 安迪·阿波罗 / 约瑟夫·戴维斯 / 比利·波斯特莱斯韦特 / 加布里埃尔·阿库乌迪克 / 斯派克·莱顿 / 亚当·赫吉尔 / 纳巴汉·里兹万 / 克莱尔·迪比尔克 / 乔纳·罗素 / 迈克尔·吉普森 / 格伦·霍威尔 / 美国 / 英国 / 印度 / 西班牙 / 加拿大 / 1917.movie / 萨姆·门德斯 / 119分钟 / 剧情 / 战争 / 萨姆·门德斯 Sam Mendes / 克里斯蒂·威尔逊-凯恩斯 Krysty Wilson-Cairns / 英语 / 法语 / 德语</div>
     </div>
 </div>
 
@@ -307,7 +363,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/27202818/">婚姻故事 / Marriage Story</a>
         </div>
-        <div class="hexo-douban-meta">2019-08-29(威尼斯电影节) / 2019-12-06(美国) / 2020(中国大陆) / 斯嘉丽·约翰逊 / 亚当·德赖弗 / 劳拉·邓恩 / 艾奇·罗伯逊 / 梅里特·韦弗 / 阿伦·阿尔达 / 朱丽·哈基提 / 雷·利奥塔 / 马克·奥布莱恩 / 华莱士·肖恩 / 凯尔·柏海莫 / 米奇·萨姆纳 / 马修·马希尔 / 罗伯特·斯密戈尔 / 艾登·梅耶里 / 布鲁克·布鲁姆 / 玛莎·凯莉 / 阿尔伯特·琼斯 / 汉娜·邓恩 / 桑德拉·罗斯科 / 麦金利·贝尔彻 / 戈登·格里克 / 马修·希尔 / 阿米尔·塔莱 / 萨拉·琼斯 / 文尼·希伯 / 胡安·阿方索 / 洛蕾塔·谢诺斯基 / 滕德·艾德比佩 / Julia Greer / 英国 / 美国 / 诺亚·鲍姆巴赫 / 136分钟 / 婚姻故事 / 剧情 / 爱情 / 诺亚·鲍姆巴赫 Noah Baumbach / 英语</div>
+        <div class="hexo-douban-meta">2019-08-29(威尼斯电影节) / 2019-12-06(美国) / 2020(中国大陆) / 斯嘉丽·约翰逊 / 亚当·德赖弗 / 劳拉·邓恩 / 艾奇·罗伯逊 / 梅里特·韦弗 / 阿伦·阿尔达 / 朱丽·哈基提 / 雷·利奥塔 / 马克·奥布莱恩 / 华莱士·肖恩 / 凯尔·柏海莫 / 米奇·萨姆纳 / 马修·马希尔 / 罗伯特·斯密戈尔 / 艾登·梅耶里 / 布鲁克·布鲁姆 / 玛莎·凯莉 / 阿尔伯特·琼斯 / 汉娜·邓恩 / 桑德拉·罗斯科 / 麦金利·贝尔彻 / 戈登·格里克 / 马修·希尔 / 阿米尔·塔莱 / 萨拉·琼斯 / 文尼·希伯 / 胡安·阿方索 / 洛蕾塔·谢诺斯基 / 滕德·艾德比佩 / 朱莉娅·格里尔 / 英国 / 美国 / 诺亚·鲍姆巴赫 / 136分钟 / 婚姻故事 / 剧情 / 爱情 / 诺亚·鲍姆巴赫 Noah Baumbach / 英语</div>
     </div>
 </div>
 
@@ -319,7 +375,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26348103/">小妇人 / Little Women</a>
         </div>
-        <div class="hexo-douban-meta">2019-12-25(美国) / 2020(中国大陆) / 西尔莎·罗南 / 艾玛·沃森 / 弗洛伦斯·皮尤 / 伊莱扎·斯坎伦 / 劳拉·邓恩 / 蒂莫西·柴勒梅德 / 梅丽尔·斯特里普 / 鲍勃·奥登科克 / 詹姆斯·诺顿 / 路易·加瑞尔 / 克里斯·库珀 / 崔西·莱茨 / 艾比·奎因 / 萨沙·弗若洛娃 / 莉莉·恩格勒特 / 爱德华德·弗莱彻 / 杰妮·霍蒂谢尔 / 多梅尼克·阿尔迪诺 / 汤姆·斯特拉特福 / 托马斯·马里亚诺 / 哈德莉·罗宾逊 / 杰米·加扎里安 / 泰勒·乔格森 / 玛丽安·普朗科特 / 美国 / www.littlewomen.movie/ / 格蕾塔·葛韦格 / 135分钟 / 小妇人 / 剧情 / 爱情 / 格蕾塔·葛韦格 Greta Gerwig / 路易莎·梅·奥尔科特 Louisa May Alcott / 英语</div>
+        <div class="hexo-douban-meta">2019-12-25(美国) / 2020(中国大陆) / 西尔莎·罗南 / 艾玛·沃森 / 佛罗伦斯·珀 / 伊莱扎·斯坎伦 / 劳拉·邓恩 / 蒂莫西·柴勒梅德 / 梅丽尔·斯特里普 / 鲍勃·奥登科克 / 詹姆斯·诺顿 / 路易·加瑞尔 / 克里斯·库珀 / 崔西·莱茨 / 艾比·奎因 / 萨沙·弗若洛娃 / 莉莉·恩格勒特 / 爱德华德·弗莱彻 / 杰妮·霍蒂谢尔 / 多梅尼克·阿尔迪诺 / 汤姆·斯特拉特福 / 托马斯·马里亚诺 / 哈德莉·罗宾逊 / 杰米·加扎里安 / 泰勒·乔格森 / 玛丽安·普朗科特 / 美国 / www.littlewomen.movie/ / 格蕾塔·葛韦格 / 135分钟 / 小妇人 / 剧情 / 爱情 / 格蕾塔·葛韦格 Greta Gerwig / 路易莎·梅·奥尔科特 Louisa May Alcott / 英语</div>
     </div>
 </div>
 
@@ -535,7 +591,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/7015732/">玛丽娜·阿布拉莫维奇：艺术家在场 / Marina Abramović: The Artist Is Present</a>
         </div>
-        <div class="hexo-douban-meta">2012-01-20(圣丹斯电影节) / 2012-02-11(柏林电影节) / 玛丽娜·阿布拉莫维奇 / Ulay / Klaus Biesenbach / David Balliano / Chrissie Iles / Arthur Danto / 大卫·布雷恩 / 詹姆斯·弗兰科 / Rushka Bergman / Ashton Swinford / 奥兰多·布鲁姆 / 美国 / www.marinafilm.com / 马修·艾克斯 / 杰弗里·杜普雷 / Maro Chermayeff / 106分钟 / 玛丽娜·阿布拉莫维奇：艺术家在场 / 纪录片 / 传记 / 英语</div>
+        <div class="hexo-douban-meta">2012-01-20(圣丹斯电影节) / 2012-02-11(柏林电影节) / 玛丽娜·阿布拉莫维奇 / 乌雷 / Klaus Biesenbach / David Balliano / Chrissie Iles / Arthur Danto / 大卫·布雷恩 / 詹姆斯·弗兰科 / 拉什卡·伯格曼 / Ashton Swinford / 奥兰多·布鲁姆 / 美国 / www.marinafilm.com / 马修·艾克斯 / 杰弗里·杜普雷 / 马可·切尔梅耶夫 / 106分钟 / 玛丽娜·阿布拉莫维奇：艺术家在场 / 纪录片 / 传记 / 英语</div>
     </div>
 </div>
 
@@ -871,7 +927,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1293146/">豹 / Il gattopardo</a>
         </div>
-        <div class="hexo-douban-meta">1963-03-29(意大利) / 伯特·兰卡斯特 / 克劳迪娅·卡汀娜 / 阿兰·德龙 / 保罗·斯托帕 / 里娜·莫雷利 / 奥塔维亚·皮科洛 / 伊妲·伽利 / 卢奇拉·莫拉基 / 特伦斯·希尔 / 罗慕洛·瓦利 / 皮埃尔·克里蒙地 / 意大利 / 法国 / 卢基诺·维斯康蒂 / 187分钟 / 205分钟(首映版) / 151分钟(西班牙) / 161分钟(英国) / 161分钟(西德) / 165分钟(美国) / 195分钟(法国-戛纳电影节) / 178分钟(DVD) / 豹 / 剧情 / 历史 / 爱情 / 战争 / Suso Cecchi d&#39;Amico / Pasquale Festa Campanile / Luchino Visconti / 意大利语 / 拉丁语</div>
+        <div class="hexo-douban-meta">1963-03-29(意大利) / 伯特·兰卡斯特 / 克劳迪娅·卡汀娜 / 阿兰·德龙 / 保罗·斯托帕 / 里娜·莫雷利 / 卢奇拉·莫拉基 / 伊妲·伽利 / 奥塔维亚·皮科洛 / 特伦斯·希尔 / 罗慕洛·瓦利 / 皮埃尔·克里蒙地 / 塞尔日·雷吉亚尼 / 意大利 / 法国 / 卢基诺·维斯康蒂 / 187分钟 / 205分钟(首映版) / 151分钟(西班牙) / 161分钟(英国) / 161分钟(西德) / 165分钟(美国) / 195分钟(法国-戛纳电影节) / 178分钟(DVD) / 豹 / 剧情 / 历史 / 爱情 / 战争 / Suso Cecchi d&#39;Amico / Pasquale Festa Campanile / Luchino Visconti / 意大利语 / 拉丁语</div>
     </div>
 </div>
 
@@ -955,7 +1011,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1889053/">芭萨提的颜色 / Rang De Basanti</a>
         </div>
-        <div class="hexo-douban-meta">2006-01-26 / 阿米尔·汗 / 悉塔尔特 / 沙尔曼·乔希 / 库纳尔·卡普尔 / 阿图尔·库尔卡尼 / 彭雅思 / 苏哈·阿里·汗 / 斯蒂文·麦金托什 / 马达范 / 瓦希达·拉赫曼 / 阿努潘·凯尔 / 凯伦·凯尔 / 欧姆·普瑞 / 印度 / 拉凯什·奥姆普拉卡西·梅赫拉 / 167分钟 / 芭萨提的颜色 / 剧情 / 喜剧 / 历史 / Renzil D&#39;Silva / Prasoon Joshi / 拉凯什·奥姆普拉卡西·梅赫拉 Rakeysh Omprakash Mehra / Kamlesh Pandey / 乌尔都语 / 印地语 / 英语</div>
+        <div class="hexo-douban-meta">2006-01-26 / 阿米尔·汗 / 悉塔尔特 / 沙尔曼·乔希 / 库纳尔·卡普尔 / 阿图尔·库尔卡尼 / 彭雅思 / 苏哈·阿里·汗 / 斯蒂文·麦金托什 / 马达范 / 瓦希达·拉赫曼 / 阿努潘·凯尔 / 凯伦·凯尔 / 欧姆·普瑞 / 詹丹·罗伊·萨纳尔 / 印度 / 拉凯什·奥姆普拉卡西·梅赫拉 / 167分钟 / 芭萨提的颜色 / 剧情 / 喜剧 / 历史 / Renzil D&#39;Silva / Prasoon Joshi / 拉凯什·奥姆普拉卡西·梅赫拉 Rakeysh Omprakash Mehra / Kamlesh Pandey / 乌尔都语 / 印地语 / 英语</div>
     </div>
 </div>
 
@@ -1123,7 +1179,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/30135073/">命运航班 第一季 / Manifest Season 1</a>
         </div>
-        <div class="hexo-douban-meta">2018-09-24(美国) / 梅丽莎·罗斯伯格 / 乔希·达拉斯 / 雅典娜·卡尔卡尼斯 / J.R.拉米雷斯 / 卢娜·布雷斯 / 杰克·梅西纳 / 帕尔文·考尔 / 提姆·莫里亚蒂 / 阿尔弗雷多·纳西索 / 寇蒂斯·库克 / 阿娜塔·阿普洛 / 乔尔·德拉富恩特 / 弗兰克·迪尔 / 吉姆·特鲁-福斯特 / 理查德·托普尔 / Kisha Barr / Whitney Andrews / 朱塞佩·阿迪佐内 / John Wojda / Jonée B. Shady / Kapil Bawa / Malachy Cleary / 马加 / Geraldine Leer / Dustin Nichols / Julienne Hanzelka Kim / 卡特里娜·E·珀金斯 / 安德鲁·山斯尼格 / 杰瑞德·格里姆斯 / 美国 / 大卫·弗兰科尔 / 命运航班 / 43分钟 / 命运航班 / 剧情 / 科幻 / 家庭 / 杰夫·拉克 Jeff Rake / 英语</div>
+        <div class="hexo-douban-meta">2018-09-24(美国) / 梅丽莎·罗斯伯格 / 乔希·达拉斯 / 雅典娜·卡尔卡尼斯 / J.R.拉米雷斯 / 卢娜·布雷斯 / 杰克·梅西纳 / 帕尔文·考尔 / 提姆·莫里亚蒂 / 阿尔弗雷多·纳西索 / 寇蒂斯·库克 / 阿娜塔·阿普洛 / 乔尔·德拉富恩特 / 弗兰克·迪尔 / 吉姆·特鲁-福斯特 / 理查德·托普尔 / Kisha Barr / Whitney Andrews / 朱塞佩·阿迪佐内 / John Wojda / Jonée B. Shady / Kapil Bawa / 马拉奇·克利里 / 马加 / Geraldine Leer / Dustin Nichols / Julienne Hanzelka Kim / 卡特里娜·E·珀金斯 / 安德鲁·山斯尼格 / 杰瑞德·格里姆斯 / 美国 / 大卫·弗兰科尔 / 命运航班 / 43分钟 / 命运航班 / 剧情 / 科幻 / 家庭 / 杰夫·拉克 Jeff Rake / 英语</div>
     </div>
 </div>
 
@@ -1375,7 +1431,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1308762/">借刀杀人 / Collateral</a>
         </div>
-        <div class="hexo-douban-meta">2004-08-06(美国) / 汤姆·克鲁斯 / 杰米·福克斯 / 贾达·萍克·史密斯 / 马克·鲁弗洛 / 彼得·博格 / 布鲁斯·麦克吉尔 / 哈维尔·巴登 / 杰森·斯坦森 / 艾尔玛·霍尔 / 巴里·沙巴卡·亨利 / 理查德·琼斯 / 博德希·埃夫曼 / 黛比·玛扎 / 埃米里奥·瑞弗拉 / 杰米·麦克布莱德 / 杰拉德·加纳 / 拉斯洛·克利马 / 罗纳德·穆德罗 / 迈克尔·多特森 / 马克·库布尔 / 里克·加西亚 / 丹尼·德尔·托罗 / 曼努埃尔·乌雷戈 / 迈克尔-约翰·沃尔夫 / Paul Aulicino / 保罗·安德斯坦 / Michael Bentt / 史提文科兹洛夫斯基 / 路易斯·蒙卡达 / Neil Patil / Kyu Lee / 韦德·威廉姆斯 / 罗杰·斯通伯纳 / Ken Waters / Tony Sagastizado I / Gary Rodriguez / Klea Scott / 小托马斯·罗萨莱斯 / 布兰顿·莫拉勒 / David Mersault / 基诺·蒙特斯诺斯 / 美国 / 迈克尔·曼 / 120 分钟 / 借刀杀人 / 犯罪 / 剧情 / 惊悚 / 斯图尔特·贝亚蒂耶 Stuart Beattie / 英语 / 西班牙语</div>
+        <div class="hexo-douban-meta">2004-08-06(美国) / 汤姆·克鲁斯 / 杰米·福克斯 / 贾达·萍克·史密斯 / 马克·鲁弗洛 / 彼得·博格 / 布鲁斯·麦克吉尔 / 哈维尔·巴登 / 杰森·斯坦森 / 艾尔玛·霍尔 / 巴里·沙巴卡·亨利 / 理查德·琼斯 / 博德希·埃夫曼 / 黛比·玛扎 / 埃米里奥·瑞弗拉 / 杰米·麦克布莱德 / 杰拉德·加纳 / 拉斯洛·克利马 / 罗纳德·穆德罗 / 迈克尔·多特森 / 马克·库布尔 / 里克·加西亚 / 丹尼·德尔·托罗 / 曼努埃尔·乌雷戈 / 迈克尔-约翰·沃尔夫 / Paul Aulicino / 保罗·安德斯坦 / Michael Bentt / 史蒂文·科兹洛夫斯基 / 路易斯·蒙卡达 / Neil Patil / Kyu Lee / 韦德·威廉姆斯 / 罗杰·斯通伯纳 / Ken Waters / Tony Sagastizado I / Gary Rodriguez / Klea Scott / 小托马斯·罗萨莱斯 / 布兰顿·莫拉勒 / David Mersault / 基诺·蒙特斯诺斯 / 美国 / 迈克尔·曼 / 120 分钟 / 借刀杀人 / 犯罪 / 剧情 / 惊悚 / 斯图尔特·贝亚蒂耶 Stuart Beattie / 英语 / 西班牙语</div>
     </div>
 </div>
 
@@ -1411,7 +1467,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1291583/">天空之城 / 天空の城ラピュタ</a>
         </div>
-        <div class="hexo-douban-meta">1986-08-02(日本) / 1992-05-01(中国大陆) / 田中真弓 / 横泽启子 / 初井言荣 / 寺田农 / 常田富士男 / 永井一郎 / 糸博 / 鹫尾真知子 / 神山卓三 / 安原义人 / 槐柳二 / 鳕子 / 安迪·迪克 / 黛比·德里贝里 / 姜瑰瑾 / 吉姆·卡明斯 / 理查德·戴萨特 / 斯科特·门维尔 / 大泷进矢 / 林原惠美 / 林美秀 / 曼迪·帕廷金 / 胡立成 / 龟山助清 / Susan Hickman / 古田信幸 / 克萝丽丝·利奇曼 / 迈克尔·麦克沙恩 / 詹姆斯·范德比克 / 约翰·德米塔 / 马克·哈米尔 / 安娜·帕奎因 / 特蕾丝·麦克尼尔 / 日本 / 宫崎骏 / 125分钟 / 天空之城 / 动画 / 奇幻 / 冒险 / 宫崎骏 Hayao Miyazaki / 日语</div>
+        <div class="hexo-douban-meta">1986-08-02(日本) / 1992-05-01(中国大陆) / 田中真弓 / 横泽启子 / 初井言荣 / 寺田农 / 常田富士男 / 永井一郎 / 糸博 / 鹫尾真知子 / 神山卓三 / 安原义人 / 槐柳二 / 鳕子 / 黛比·德里贝里 / 姜瑰瑾 / 吉姆·卡明斯 / 理查德·戴萨特 / 安迪·迪克 / 斯科特·门维尔 / 大泷进矢 / 林原惠美 / 林美秀 / 曼迪·帕廷金 / 胡立成 / 龟山助清 / Susan Hickman / 古田信幸 / 特蕾丝·麦克尼尔 / 克萝丽丝·利奇曼 / 迈克尔·麦克沙恩 / 约翰·德米塔 / 马克·哈米尔 / 安娜·帕奎因 / 詹姆斯·范德比克 / 日本 / 宫崎骏 / 125分钟 / 天空之城 / 动画 / 奇幻 / 冒险 / 宫崎骏 Hayao Miyazaki / 日语</div>
     </div>
 </div>
 
@@ -1423,7 +1479,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/27087724/">好莱坞往事 / Once Upon a Time... in Hollywood</a>
         </div>
-        <div class="hexo-douban-meta">2019-05-21(戛纳电影节) / 2019-07-26(美国) / 2019(中国大陆) / 莱昂纳多·迪卡普里奥 / 布拉德·皮特 / 玛格特·罗比 / 埃米尔·赫斯基 / 玛格丽特·库里 / 蒂莫西·奥利芬特 / 茱莉亚·巴特斯 / 奥斯汀·巴特勒 / 达科塔·范宁 / 布鲁斯·邓恩 / 麦克·莫 / 卢克·贝里 / 戴米恩·路易斯 / 库尔特·拉塞尔 / 阿尔·帕西诺 / 玛雅·霍克 / 西德妮·斯威尼 / 哈莉·奎恩·史密斯 / 达蒙·海瑞曼 / 凯特·贝兰特 / 洛伦扎·伊佐 / 迈克尔·马德森 / 拉莫·威利斯 / 斯科特·麦克纳里 / 小克利夫顿·克林斯 / 维多利亚·佩德雷蒂 / 吕蓓卡·盖哈特 / 佐伊·贝尔 / 莱斯利·贝加 / 瑞贝卡·瑞滕豪斯 / 萨曼莎·罗宾森 / 莉娜·邓纳姆 / 德瑞玛·沃克 / 克鲁·古拉格 / 丹妮拉·皮克 / 布伦达·瓦卡罗 / 尼古拉斯·哈蒙德 / 米奇·麦迪森 / 詹姆斯·兰德里·赫伯特 / 妮可·加利西亚 / 麦迪逊·贝蒂 / 佩内洛普·卡普迪雅 / 莫里斯·孔特 / 科斯塔·罗宁 / 卢·坦普尔 / 斯宾塞·加雷特 / 布丽安娜·乔伊·乔默 / 奥玛·杜姆 / 娜塔莉·科恩 / 拉法尔·扎维鲁查 / 马尔科·罗德里格斯 / 堪萨丝·宝琳 / 维森特·拉雷斯卡 / 殷巴尔·阿米拉夫 / 拉蒙·弗兰克 / 莫妮卡·斯塔吉丝 / 克雷格·斯塔克 / 大卫·斯廷 / 朱丽叶·吉达 / 埃迪·佩雷斯 / 布蕾迪·拉多娜 / 凯拉·拉多姆斯基 / 布里安娜·温 / 卡萝莱娜·瓦加斯 / 加里·派怀特 / 詹姆斯·麦斯登 / 蒂姆·罗斯 / 马丁·科夫 / 詹姆斯·瑞马尔 / 丹尼·斯特朗 / 艾丽西亚·卡拉米 / 苏珊妮·拉切塞斯 / 昆汀·塔伦蒂诺 / 美国 / 英国 / 中国大陆 / www.sonypictures.com/movies/onceuponatimeinhollywood / 昆汀·塔伦蒂诺 / 165分钟 / 161分钟(戛纳电影节) / 162分钟(院线版) / 171分钟(加长版) / 好莱坞往事 / 剧情 / 喜剧 / 昆汀·塔伦蒂诺 Quentin Tarantino / 英语 / 意大利语 / 西班牙语</div>
+        <div class="hexo-douban-meta">2019-05-21(戛纳电影节) / 2019-07-26(美国) / 莱昂纳多·迪卡普里奥 / 布拉德·皮特 / 玛格特·罗比 / 埃米尔·赫斯基 / 玛格丽特·库里 / 蒂莫西·奥利芬特 / 茱莉亚·巴特斯 / 奥斯汀·巴特勒 / 达科塔·范宁 / 布鲁斯·邓恩 / 麦克·莫 / 卢克·贝里 / 戴米恩·路易斯 / 库尔特·拉塞尔 / 阿尔·帕西诺 / 玛雅·霍克 / 西德妮·斯威尼 / 哈莉·奎恩·史密斯 / 达蒙·海瑞曼 / 凯特·贝兰特 / 洛伦扎·伊佐 / 迈克尔·马德森 / 拉莫·威利斯 / 斯科特·麦克纳里 / 小克利夫顿·克林斯 / 维多利亚·佩德雷蒂 / 吕蓓卡·盖哈特 / 佐伊·贝尔 / 莱斯利·贝加 / 瑞贝卡·瑞滕豪斯 / 萨曼莎·罗宾森 / 莉娜·邓纳姆 / 德瑞玛·沃克 / 克鲁·古拉格 / 丹妮拉·皮克 / 布伦达·瓦卡罗 / 尼古拉斯·哈蒙德 / 米奇·麦迪森 / 詹姆斯·兰德里·赫伯特 / 妮可·加利西亚 / 麦迪逊·贝蒂 / 佩内洛普·卡普迪雅 / 莫里斯·孔特 / 科斯塔·罗宁 / 卢·坦普尔 / 斯宾塞·加雷特 / 布丽安娜·乔伊·乔默 / 奥玛·杜姆 / 娜塔莉·科恩 / 拉法尔·扎维鲁查 / 马尔科·罗德里格斯 / 堪萨丝·宝琳 / 维森特·拉雷斯卡 / 殷巴尔·阿米拉夫 / 拉蒙·弗兰克 / 莫妮卡·斯塔吉丝 / 克雷格·斯塔克 / 大卫·斯廷 / 朱丽叶·吉达 / 埃迪·佩雷斯 / 布蕾迪·拉多娜 / 凯拉·拉多姆斯基 / 布里安娜·温 / 卡萝莱娜·瓦加斯 / 加里·派怀特 / 詹姆斯·麦斯登 / 蒂姆·罗斯 / 马丁·科夫 / 詹姆斯·瑞马尔 / 丹尼·斯特朗 / 艾丽西亚·卡拉米 / 苏珊妮·拉切塞斯 / 昆汀·塔伦蒂诺 / 美国 / 英国 / 中国大陆 / www.sonypictures.com/movies/onceuponatimeinhollywood / 昆汀·塔伦蒂诺 / 165分钟 / 161分钟(戛纳电影节) / 162分钟(院线版) / 171分钟(加长版) / 好莱坞往事 / 剧情 / 喜剧 / 昆汀·塔伦蒂诺 Quentin Tarantino / 英语 / 意大利语 / 西班牙语</div>
     </div>
 </div>
 
@@ -1435,7 +1491,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1291580/">杀死比尔 / Kill Bill: Vol. 1</a>
         </div>
-        <div class="hexo-douban-meta">2003-09-29(好莱坞首映) / 2003-10-10(美国) / 乌玛·瑟曼 / 刘玉玲 / 薇薇卡·福克斯 / 达丽尔·汉纳 / 大卫·卡拉丁 / 迈克尔·马德森 / 朱莉·德赖弗斯 / 栗山千明 / 千叶真一 / 刘家辉 / 迈克尔·帕克斯 / 迈克尔·鲍文 / 国村隼 / 大叶健二 / 风祭由纪 / Ambrosia Kelley / 田中要次 / 张伸 / 佐藤佐吉 / 北村一辉 / 森下能幸 / 高桥一生 / 美国 / 昆汀·塔伦蒂诺 / 111分钟 / 杀死比尔 / 动作 / 犯罪 / 惊悚 / 昆汀·塔伦蒂诺 Quentin Tarantino / 乌玛·瑟曼 Uma Thurman / 英语 / 日语 / 法语</div>
+        <div class="hexo-douban-meta">2003-09-29(好莱坞首映) / 2003-10-10(美国) / 乌玛·瑟曼 / 刘玉玲 / 薇薇卡·福克斯 / 达丽尔·汉纳 / 大卫·卡拉丁 / 迈克尔·马德森 / 朱莉·德赖弗斯 / 栗山千明 / 千叶真一 / 刘家辉 / 迈克尔·帕克斯 / 迈克尔·鲍文 / 国村隼 / 大叶健二 / 风祭由纪 / 张伸 / 田中要次 / 佐藤佐吉 / 北村一辉 / 森下能幸 / 高桥一生 / Ambrosia Kelley / 美国 / 昆汀·塔伦蒂诺 / 111分钟 / 杀死比尔 / 动作 / 犯罪 / 惊悚 / 昆汀·塔伦蒂诺 Quentin Tarantino / 乌玛·瑟曼 Uma Thurman / 英语 / 日语 / 法语</div>
     </div>
 </div>
 
@@ -1495,7 +1551,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/2997076/">华尔街之狼 / The Wolf of Wall Street</a>
         </div>
-        <div class="hexo-douban-meta">2013-12-17(纽约首映) / 2013-12-25(美国) / 莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比 / 马修·麦康纳 / 凯尔·钱德勒 / 罗伯·莱纳 / 乔·博恩瑟 / 让·杜雅尔丹 / 克里斯汀·米利欧缇 / 卡塔莉娜·凯斯 / 克斯汀·埃伯索尔 / 谢伊·惠格姆 / 迈克尔·布莱恩·弗兰奇 / Sandra Nelson / 罗伯特·克洛赫赛 / J.C.麦肯泽 / 弗兰·勒博维茨 / 阿什莉·阿特金森 / 爱德华·赫曼 / 泰德·格里芬 / 丹尼·A·阿贝卡瑟尔 / 瓦德·霍尔顿 / Kellen Moriarty / 特雷西·弗里德曼 / 迪马·艾特肯 / Ashley Blankenship / 何塞·拉蒙·罗萨里奥 / 布莱恩·伯顿 / 唐尼·科沙瓦茨 / 凯瑟琳·科廷 / 乔丹·贝尔福特 / 托马斯·米德蒂奇 / 肯尼斯·崔 / 阿雅·卡什 / 乔恩·费儒 / 斯派克·琼斯 / 伊桑·苏普利 / 杰克·霍夫曼 / 亨利·泽布罗夫斯基 / 布莱恩·萨卡 / Sky Watersend / 艾米莉·特里梅因 / 里兹万·曼吉 / P·J·伯恩 / 乔安娜·林莉 / 布莱特·舒伏德 / 美国 / www.thewolfofwallstreet.com / 马丁·斯科塞斯 / 180分钟 / 华尔街之狼 / 剧情 / 喜剧 / 传记 / 犯罪 / 特伦斯·温特 Terence Winter / Jordan Belfort / 英语 / 法语</div>
+        <div class="hexo-douban-meta">2013-12-17(纽约首映) / 2013-12-25(美国) / 莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比 / 马修·麦康纳 / 凯尔·钱德勒 / 罗伯·莱纳 / 乔·博恩瑟 / 让·杜雅尔丹 / 克里斯汀·米利欧缇 / 卡塔莉娜·凯斯 / 迪马·艾特肯 / Sandra Nelson / 罗伯特·克洛赫赛 / 弗兰·勒博维茨 / 泰德·格里芬 / 爱德华·赫曼 / 阿什莉·阿特金森 / J.C.麦肯泽 / 谢伊·惠格姆 / 迈克尔·布莱恩·弗兰奇 / 凯瑟琳·科廷 / 唐尼·科沙瓦茨 / Ashley Blankenship / 何塞·拉蒙·罗萨里奥 / 布莱恩·伯顿 / 特雷西·弗里德曼 / Kellen Moriarty / 瓦德·霍尔顿 / 丹尼·A·阿贝卡瑟尔 / 克斯汀·埃伯索尔 / 乔丹·贝尔福特 / 斯派克·琼斯 / 肯尼斯·崔 / 阿雅·卡什 / 乔恩·费儒 / 伊桑·苏普利 / 布莱特·舒伏德 / 托马斯·米德蒂奇 / 杰克·霍夫曼 / 亨利·泽布罗夫斯基 / 布莱恩·萨卡 / Sky Watersend / 艾米莉·特里梅因 / 里兹万·曼吉 / P·J·伯恩 / 乔安娜·林莉 / 美国 / www.thewolfofwallstreet.com / 马丁·斯科塞斯 / 180分钟 / 华尔街之狼 / 剧情 / 喜剧 / 传记 / 犯罪 / 特伦斯·温特 Terence Winter / Jordan Belfort / 英语 / 法语</div>
     </div>
 </div>
 
@@ -1591,7 +1647,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1309054/">天气预报员 / The Weather Man</a>
         </div>
-        <div class="hexo-douban-meta">2005-10-28(美国) / 尼古拉斯·凯奇 / 迈克尔·凯恩 / 霍普·戴维斯 / 杰蒙妮·德拉佩纳 / 尼古拉斯·霍尔特 / Judith McConnell / 埃伦·马洛 / 美国 / 德国 / 戈尔·维宾斯基 / 102 分钟 / 天气预报员 / 喜剧 / 剧情 / 史帝文·康拉德 Steve Conrad / 英语</div>
+        <div class="hexo-douban-meta">2005-10-28(美国) / 尼古拉斯·凯奇 / 迈克尔·凯恩 / 霍普·戴维斯 / 杰蒙妮·德拉佩纳 / 尼古拉斯·霍尔特 / Judith McConnell / 埃伦·马洛 / 迈克·巴卡雷纳 / 美国 / 德国 / 戈尔·维宾斯基 / 102 分钟 / 天气预报员 / 喜剧 / 剧情 / 史帝文·康拉德 Steve Conrad / 英语</div>
     </div>
 </div>
 
@@ -1639,7 +1695,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1427500/">同志亦凡人 第一季 / Queer as Folk Season 1</a>
         </div>
-        <div class="hexo-douban-meta">2000-12-03(美国) / 哈尔·斯帕克斯 / 葛尔·哈罗德 / 兰迪·哈里森 / 斯科特·洛威尔 / 彼得·派格 / 克里斯·波特 / 米歇尔·科鲁尼 / 西娅·吉尔 / 莎朗·格拉斯 / Jack Wetherall / David Macniven / Richard Collier / 梅琳达·达尔 / Kay Hawtrey / Fabio Mirenzi / Rex Harrington / Simon Wong / David Krae / John-Philip Vazquez / Blair Wood / 乔安妮·里斯 / Fab Filippo / 亚当·哈林顿 / Meredith Henderson / Mike Beaver / 朱莉·卡纳 / 迈克·布瓦韦尔 / 大卫·瑞勒 / 特雷·史密斯 / Frank Chiesurin / Adam Chuckryk / Haylee Wanstall / 克雷格·伯纳托夫斯基 / Goldie Semple / Ryan Cooley / 迈克尔·金尼 / 蒂姆·多伦 / 阿什丽·贝尔 / Sonia Laplante / Paul McGuire / Roger McKeen / Kirk Dunn / Justin Tensen / 罗茜·欧唐内 / 罗伯特·甘特 / 玛克拉·史密斯 / 包比·乔斯顿 / Sherry Miller / 瓦妮莎·阿斯皮利亚加 / 布鲁斯·加里 / 彼得·凯莱汉 / 贾森·加里-斯坦福德 / 诺亚·丹比 / 迪恩·阿姆斯特朗 / Christopher Ralph / Chad McNamara / 达林·贝克 / 桑迪·乔宾-贝文斯 / Julie McLeod / Darryl Armstrong / Ilan Rosenberg / Andrea Scott / 约翰·内威尔 / 保利诺·努内斯 / 路易斯·涅 / Gary Krawford / 朱达·卡茨 / Michael Facciolo / Gage Knox / Samantha Wilson / 马尼耶·麦克费尔 / 乔纳斯·切尔尼克 / 乔纳森·凯兹 / 恩尼斯·埃斯莫 / 李·鲁莫赫尔 / Tristan Paris / Raymond Miller / John Lefebvre / 斯科特·哈斯特 / Curtis Harrison / 杰森·琼斯 / 史蒂芬·穆尔 / 迈克尔·克莱姆 / 罗宾·托马斯 / 卡尔洛·罗塔 / Kathryn Greenwood / 马特·奥斯汀 / 弗兰克佩莱格里诺 / Jeffrey Parazzo / Shane Daly / Janet van de Graaf / Steve Puchalski / 劳伦斯·戴恩 / 马克·卢茨 / 詹姆士格兰恩德斯 / 肖恩·奥尼尔 / Jason Sharman / Jeff Jordan / Jeffery Ong / Michael McLachlan / 美国 / 加拿大 / 拉塞尔·穆卡希 / John L&#39;Ecuyer / John Greyson / 布鲁斯·麦克唐纳德 / 约翰·福西特 / 杰雷米·波德斯瓦 / 大卫·惠灵顿 / Laurie Lynd / 卡莉·斯考格兰德 / 同志亦凡人 / 55分钟 / 同志亦凡人 / 剧情 / 同性 / Ron Cowen / Daniel Lipman / 拉塞尔·T·戴维斯 Russell T. Davies / 英语</div>
+        <div class="hexo-douban-meta">2000-12-03(美国) / 哈尔·斯帕克斯 / 葛尔·哈罗德 / 兰迪·哈里森 / 斯科特·洛威尔 / 彼得·派格 / 克里斯·波特 / 米歇尔·科鲁尼 / 西娅·吉尔 / 莎朗·格拉斯 / Jack Wetherall / David Macniven / Richard Collier / 梅琳达·达尔 / Kay Hawtrey / Fabio Mirenzi / Rex Harrington / Simon Wong / David Krae / John-Philip Vazquez / Blair Wood / 乔安妮·里斯 / Fab Filippo / 亚当·哈林顿 / Meredith Henderson / Mike Beaver / 朱莉·卡纳 / 迈克·布瓦韦尔 / 大卫·瑞勒 / 特雷·史密斯 / Frank Chiesurin / Adam Chuckryk / Haylee Wanstall / 克雷格·伯纳托夫斯基 / Goldie Semple / Ryan Cooley / 迈克尔·金尼 / 蒂姆·多伦 / 阿什丽·贝尔 / Sonia Laplante / Paul McGuire / Roger McKeen / Kirk Dunn / Justin Tensen / 罗茜·欧唐内 / 罗伯特·甘特 / 玛克拉·史密斯 / 包比·乔斯顿 / Sherry Miller / 瓦妮莎·阿斯皮利亚加 / 布鲁斯·加里 / 彼得·凯莱汉 / 贾森·加里-斯坦福德 / 诺亚·丹比 / 迪恩·阿姆斯特朗 / Christopher Ralph / Chad McNamara / 达林·贝克 / 桑迪·乔宾-贝文斯 / Julie McLeod / Darryl Armstrong / Ilan Rosenberg / Andrea Scott / 约翰·内威尔 / 保利诺·努内斯 / 路易斯·涅 / Gary Krawford / 朱达·卡茨 / Michael Facciolo / Gage Knox / Samantha Wilson / 马尼耶·麦克费尔 / 乔纳斯·切尔尼克 / 乔纳森·凯兹 / 恩尼斯·埃斯莫 / 李·鲁莫赫尔 / Tristan Paris / Raymond Miller / John Lefebvre / 斯科特·哈斯特 / Curtis Harrison / 杰森·琼斯 / 史蒂芬·穆尔 / 迈克尔·克莱姆 / 罗宾·托马斯 / 卡尔洛·罗塔 / Kathryn Greenwood / 马特·奥斯汀 / 弗兰克佩莱格里诺 / Jeffrey Parazzo / Shane Daly / Janet van de Graaf / Steve Puchalski / 劳伦斯·戴恩 / 马克·卢茨 / 詹姆士格兰恩德斯 / 肖恩·奥尼尔 / Jason Sharman / Jeff Jordan / Jeffery Ong / Michael McLachlan / 美国 / 加拿大 / 拉塞尔·穆卡希 / 约翰·勒库耶 / John Greyson / 布鲁斯·麦克唐纳德 / 约翰·福西特 / 杰雷米·波德斯瓦 / 大卫·惠灵顿 / Laurie Lynd / 卡莉·斯考格兰德 / 同志亦凡人 / 55分钟 / 同志亦凡人 / 剧情 / 同性 / Ron Cowen / Daniel Lipman / 拉塞尔·T·戴维斯 Russell T. Davies / 英语</div>
     </div>
 </div>
 
@@ -1759,7 +1815,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1298744/">十二猴子 / Twelve Monkeys</a>
         </div>
-        <div class="hexo-douban-meta">1995-12-08(纽约首映) / 1996-01-05(美国) / 布鲁斯·威利斯 / 布拉德·皮特 / 大卫·摩斯 / 克里斯托弗·普卢默 / 乔恩·塞达 / 玛德琳·斯托 / Michael Chance / Vernon Campbell / 西蒙·琼斯 / Ernest Abuba / Irma St. Paule / 乔伊佩里洛 / 户田惠子 / 比尔·雷蒙德 / Aaron Michael Lacey / 理查德·斯坦利 / 菲利斯·皮雷 / Julie Mabry / 罗杰·普拉特 / 克里斯托弗·米洛尼 / 马特·罗斯 / 弗兰克·乔辛 / 斯蒂芬·布吉格沃特 / Yuri Korchenko / Stan Kang / 查克·杰弗里斯 / 安妮·高登 / Adam Hatley / Lenny Daniels / 丽莎盖伊·汉密尔顿 / 美国 / 特瑞·吉列姆 / 129分钟 / 十二猴子 / 科幻 / 悬疑 / 惊悚 / 克里斯·马克 Chris Marker / 大卫·韦伯·皮普尔斯 David Webb Peoples / 珍妮特·皮普尔斯 Janet Peoples / 英语 / 法语</div>
+        <div class="hexo-douban-meta">1995-12-08(纽约首映) / 1996-01-05(美国) / 布鲁斯·威利斯 / 布拉德·皮特 / 大卫·摩斯 / 克里斯托弗·普卢默 / 乔恩·塞达 / 玛德琳·斯托 / Michael Chance / Vernon Campbell / 西蒙·琼斯 / Ernest Abuba / Irma St. Paule / 乔伊佩里洛 / Lenny Daniels / 户田惠子 / 比尔·雷蒙德 / Aaron Michael Lacey / 理查德·斯坦利 / 菲利斯·皮雷 / 罗杰·普拉特 / 马特·罗斯 / 弗兰克·乔辛 / 丽莎盖伊·汉密尔顿 / 斯蒂芬·布吉格沃特 / Julie Mabry / Yuri Korchenko / Stan Kang / 查克·杰弗里斯 / 安妮·高登 / Adam Hatley / 克里斯托弗·米洛尼 / 美国 / 特瑞·吉列姆 / 129分钟 / 十二猴子 / 科幻 / 悬疑 / 惊悚 / 克里斯·马克 Chris Marker / 大卫·韦伯·皮普尔斯 David Webb Peoples / 珍妮特·皮普尔斯 Janet Peoples / 英语 / 法语</div>
     </div>
 </div>
 
@@ -1802,7 +1858,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2170764269.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2593593281.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/25830985/">盗火者：中国教育改革调查 / 盜火者：中國教育改革調查</a>
@@ -1862,7 +1918,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p513535588.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2154212680.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1418834/">断背山 / Brokeback Mountain</a>
@@ -1915,7 +1971,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/5912992/">熔炉 / 도가니</a>
         </div>
-        <div class="hexo-douban-meta">2011-09-22(韩国) / 孔侑 / 郑有美 / 金贤秀 / 郑仁絮 / 白承焕 / 张光 / 金民尚 / 林贤成 / 金周灵 / 严孝燮 / 全国焕 / 崔镇浩 / 金志映 / 严智星 / 许在浩 / 张素妍 / 林贤成 / 金智怜 / 李相熹 / 郑亨锡 / 洪锡然 / 韩国 / 黄东赫 / 125分钟 / 熔炉 / 剧情 / 黄东赫 Dong-hyuk Hwang / 孔枝泳 Ji-young Gong / 韩语</div>
+        <div class="hexo-douban-meta">2011-09-22(韩国) / 孔侑 / 郑有美 / 金贤秀 / 郑仁絮 / 白承焕 / 张光 / 金民尚 / 林贤成 / 金周灵 / 严孝燮 / 全国焕 / 崔镇浩 / 金志映 / 严智星 / 许在浩 / 张素妍 / 金智怜 / Joo-ryeong Kim / 李相熹 / 林贤成 / 郑亨锡 / 洪锡然 / 韩国 / 黄东赫 / 125分钟 / 熔炉 / 剧情 / 黄东赫 Dong-hyuk Hwang / 孔枝泳 Ji-young Gong / 韩语</div>
     </div>
 </div>
 
@@ -1999,7 +2055,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26745327/">他 / Him</a>
         </div>
-        <div class="hexo-douban-meta">2016-10-20(英国) / 亚力克·纽曼 / 凯瑟琳·凯丽 / 露西·莱曼 / 詹姆斯·莫瑞 / Susan Jameson / 菲恩·怀特海德 / 英国 / 安迪·德爱蒙伊 /  / 45分钟 / 他 / 剧情 / Paula Milne / 英语</div>
+        <div class="hexo-douban-meta">2016-10-20(英国) / 亚力克·纽曼 / 凯瑟琳·凯丽 / 露西·莱曼 / 詹姆斯·莫瑞 / 苏珊·詹姆森 / 菲恩·怀特海德 / 英国 / 安迪·德爱蒙伊 /  / 45分钟 / 他 / 剧情 / Paula Milne / 英语</div>
     </div>
 </div>
 
@@ -2011,7 +2067,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1291543/">功夫</a>
         </div>
-        <div class="hexo-douban-meta">2004-09-14(多伦多电影节) / 2004-12-23(中国大陆) / 2004-12-23(中国香港) / 2015-01-15(中国大陆3D) / 周星驰 / 元秋 / 元华 / 黄圣依 / 梁小龙 / 陈国坤 / 田启文 / 林子聪 / 林雪 / 冯克安 / 释彦能 / 冯小刚 / 袁祥仁 / 张一白 / 赵志凌 / 董志华 / 何文辉 / 陈凯师 / 贾康熙 / 林子善 / 任珈锐 / 王仕颖 / 冯勉恒 / 范湉湉 / 杨能 / 黄锐民 / 姜瑰瑾 / 丁小龙 / 张明明 / 中国大陆 / 中国香港 / 周星驰 / 100分钟(3D重映) / 95分钟(中国大陆) / 99分钟(美国) / 动作 / 喜剧 / 犯罪 / 奇幻 / 曾谨昌 Kan-Cheung Tsang / 陈文强 Man Keung Chan / 周星驰 Stephen Chow / 霍昕 Xin Huo / 粤语 / 汉语普通话 / 手语</div>
+        <div class="hexo-douban-meta">2004-09-14(多伦多电影节) / 2004-12-23(中国大陆) / 2004-12-23(中国香港) / 2015-01-15(中国大陆3D) / 周星驰 / 元秋 / 元华 / 黄圣依 / 梁小龙 / 陈国坤 / 田启文 / 林子聪 / 林雪 / 冯克安 / 释彦能 / 冯小刚 / 袁祥仁 / 张一白 / 赵志凌 / 董志华 / 何文辉 / 陈凯师 / 贾康熙 / 林子善 / 任珈锐 / 王仕颖 / 冯勉恒 / 范湉湉 / 杨能 / 黄锐民 / 姜瑰瑾 / 丁小龙 / 张明明 / 林志泰 / 程守一 / 中国大陆 / 中国香港 / 周星驰 / 100分钟(3D重映) / 95分钟(中国大陆) / 99分钟(美国) / 动作 / 喜剧 / 犯罪 / 奇幻 / 曾谨昌 Kan-Cheung Tsang / 陈文强 Man Keung Chan / 周星驰 Stephen Chow / 霍昕 Xin Huo / 粤语 / 汉语普通话 / 手语</div>
     </div>
 </div>
 
@@ -2167,7 +2223,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/25662329/">疯狂动物城 / Zootopia</a>
         </div>
-        <div class="hexo-douban-meta">2016-03-04(中国大陆) / 2016-03-04(美国) / 金妮弗·古德温 / 杰森·贝特曼 / 伊德里斯·艾尔巴 / 珍妮·斯蕾特 / 内特·托伦斯 / 邦尼·亨特 / 唐·雷克 / 汤米·钟 / J·K·西蒙斯 / 奥克塔维亚·斯宾瑟 / 艾伦·图代克 / 夏奇拉 / 雷蒙德·S·佩尔西 / 德拉·萨巴 / 莫里斯·拉马奇 / 菲尔·约翰斯顿 / 约翰·迪·马吉欧 / 凯蒂·洛斯 / 吉塔·雷迪 / 杰西·科尔蒂 / 汤米·利斯特 / 乔希·达拉斯 / 瑞奇·摩尔 / 凯斯·索西 / 彼得·曼斯布里奇 / 拜伦·霍华德 / 杰拉德·布什 / 马克·史密斯 / 乔西·特立尼达 / 约翰·拉维尔 / 克里斯汀·贝尔 / 吉尔·科德斯 / 梅利莎·古德温 / 季冠霖 / 李楠 / 容祖儿 / 黄子华 / 佟心竹 / 蔡依林 / 戴维德·迪格斯 / 张震 / 尼古拉斯·格斯特 / 美国 / 拜伦·霍华德 / 瑞奇·摩尔 / 杰拉德·布什 / 109分钟(中国大陆) / 108分钟 / 疯狂动物城 / 喜剧 / 动画 / 冒险 / 拜伦·霍华德 Byron Howard / 瑞奇·摩尔 Rich Moore / 杰拉德·布什 Jared Bush / 吉姆·里尔顿 Jim Reardon / 乔西·特立尼达 Josie Trinidad / 菲尔·约翰斯顿 Phil Johnston / 珍妮弗·李 Jennifer Lee / 英语 / 挪威语</div>
+        <div class="hexo-douban-meta">2016-03-04(中国大陆) / 2016-03-04(美国) / 金妮弗·古德温 / 杰森·贝特曼 / 伊德里斯·艾尔巴 / 珍妮·斯蕾特 / 内特·托伦斯 / 邦尼·亨特 / 唐·雷克 / 汤米·钟 / J·K·西蒙斯 / 奥克塔维亚·斯宾瑟 / 艾伦·图代克 / 夏奇拉 / 雷蒙德·S·佩尔西 / 德拉·萨巴 / 莫里斯·拉马奇 / 菲尔·约翰斯顿 / 约翰·迪·马吉欧 / 凯蒂·洛斯 / 吉塔·雷迪 / 杰西·科尔蒂 / 汤米·利斯特 / 乔希·达拉斯 / 瑞奇·摩尔 / 凯斯·索西 / 彼得·曼斯布里奇 / 拜伦·霍华德 / 杰拉德·布什 / 马克·史密斯 / 乔西·特立尼达 / 约翰·拉维尔 / 克里斯汀·贝尔 / 吉尔·科德斯 / 梅利莎·古德温 / Nan Li / 李楠 / 尼古拉斯·格斯特 / 容祖儿 / 季冠霖 / 张震 / 戴维德·迪格斯 / 蔡依林 / 黄子华 / 佟心竹 / 美国 / 拜伦·霍华德 / 瑞奇·摩尔 / 杰拉德·布什 / 109分钟(中国大陆) / 108分钟 / 疯狂动物城 / 喜剧 / 动画 / 冒险 / 拜伦·霍华德 Byron Howard / 瑞奇·摩尔 Rich Moore / 杰拉德·布什 Jared Bush / 吉姆·里尔顿 Jim Reardon / 乔西·特立尼达 Josie Trinidad / 菲尔·约翰斯顿 Phil Johnston / 珍妮弗·李 Jennifer Lee / 英语 / 挪威语</div>
     </div>
 </div>
 
@@ -2335,7 +2391,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3008691/">贝尔科实验 / The Belko Experiment</a>
         </div>
-        <div class="hexo-douban-meta">2016-09-10(多伦多电影节) / 2017-03-17(美国) / 小约翰·加拉赫 / 托尼·戈德温 / 亚德里亚·霍纳 / 约翰·C·麦金雷 / 梅罗妮·迪亚兹 / 欧文·约曼 / 肖恩·古恩 / 布伦特·塞克斯顿 / 乔什·布雷纳 / 大卫·达斯马齐连 / 大卫·德尔·里奥 / 格雷格·亨利 / 迈克尔·鲁克 / 拉丝蒂·休默 / 盖尔·比恩 / 乔·弗里亚 / 亚布拉哈姆·本鲁比 / 米凯拉·霍沃 / 美国 / 哥伦比亚 / 克瑞格·麦克林恩 / 89分钟 / 贝尔科实验 / 动作 / 惊悚 / 詹姆斯·古恩 James Gunn / 英语</div>
+        <div class="hexo-douban-meta">2016-09-10(多伦多电影节) / 2017-03-17(美国) / 小约翰·加拉赫 / 托尼·戈德温 / 阿德里娅·阿霍纳 / 约翰·C·麦金雷 / 梅罗妮·迪亚兹 / 欧文·约曼 / 肖恩·古恩 / 布伦特·塞克斯顿 / 乔什·布雷纳 / 大卫·达斯马齐连 / 大卫·德尔·里奥 / 格雷格·亨利 / 迈克尔·鲁克 / 拉丝蒂·休默 / 盖尔·比恩 / 乔·弗里亚 / 亚布拉哈姆·本鲁比 / 米凯拉·霍沃 / 美国 / 哥伦比亚 / 克瑞格·麦克林恩 / 89分钟 / 贝尔科实验 / 动作 / 惊悚 / 詹姆斯·古恩 James Gunn / 英语</div>
     </div>
 </div>
 
@@ -2359,7 +2415,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1937502/">追风筝的人 / The Kite Runner</a>
         </div>
-        <div class="hexo-douban-meta">2007-10(芝加哥电影节) / 2008-01-11(美国) / 赫立德·阿卜杜拉 / 阿托莎·利奥妮 / 肖恩·托布  / 赫玛永·厄沙迪 / 卡勒德·胡赛尼 / 艾哈迈德.汗.马赫米扎达 / Zekeria Ebrahimi / 萨伊德·塔格马奥 / 约翰·德·兰西 / Tim Halpin / Harmony Blossom / Brian Vowell / Charles Lewis III / 胡马云·埃沙迪 / 美国 / 中国大陆 / 英国 / 阿富汗 / 马克·福斯特 / 128 分钟 / 追风筝的人 / 剧情 / 戴维·贝尼奥夫 David Benioff / 卡勒德·胡赛尼 Khaled Hosseini / 英语 / 达里语 / 普什图语 / 乌尔都语 / 俄语</div>
+        <div class="hexo-douban-meta">2007-10(芝加哥电影节) / 2008-01-11(美国) / 赫立德·阿卜杜拉 / 阿托莎·利奥妮 / 肖恩·托布  / 赫玛永·厄沙迪 / Zekeria Ebrahimi / 胡马云·埃沙迪 / 艾哈迈德.汗.马赫米扎达 / 卡勒德·胡赛尼 / Charles Lewis III / Brian Vowell / Harmony Blossom / Tim Halpin / 约翰·德·兰西 / 萨伊德·塔格马奥 / 美国 / 中国大陆 / 英国 / 阿富汗 / 马克·福斯特 / 128 分钟 / 追风筝的人 / 剧情 / 戴维·贝尼奥夫 David Benioff / 卡勒德·胡赛尼 Khaled Hosseini / 英语 / 达里语 / 普什图语 / 乌尔都语 / 俄语</div>
     </div>
 </div>
 
@@ -2443,7 +2499,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1309046/">V字仇杀队 / V for Vendetta</a>
         </div>
-        <div class="hexo-douban-meta">2005-12-11(BNAT电影节) / 2006-03-17(美国) / 娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞 / 斯蒂芬·弗雷 / 约翰·赫特 / 蒂姆·皮戈特-史密斯 / 鲁珀特·格雷夫斯 / 罗杰·阿拉姆 / 本·迈尔斯 / 西妮德·库萨克 / 娜塔莎·怀特曼 / 约翰·斯坦丁 / 埃迪·马森 / 克里夫·阿什伯恩 / Emma Field-Rayner / 伊安·布尔费尔德 / Mark Phoenix / Alister Mazzotti / 比莉·库克 / 盖伊·亨利 / 科斯马·肖 / Megan Gay / Roderic Culver / Tara Hacking / 安迪·莱什利兹 / 查德·斯塔赫斯基 / 布拉德利·斯蒂夫·福特 / 马德琳·拉基克-普拉特 / 塞丽娜·贾尔斯 / 卡斯腾·海斯 / 伊莫琴·普茨 / 劳拉·格林伍德 / Kyra Meyer / 玛丽·萧克莱  / 理查德·莱恩 / Michael Simkins / 大卫·雷奇 / 马尔科姆·辛克莱 / 马迪斯·兰德维尔  / Simon Newby / 美国 / 英国 / 德国 / 詹姆斯·麦克特格 / 132分钟 / V字仇杀队 / 剧情 / 动作 / 科幻 / 惊悚 / 安迪·沃卓斯基 Andy Wachowski / 拉里·沃卓斯基 Lana Wachowski / 英语</div>
+        <div class="hexo-douban-meta">2005-12-11(BNAT电影节) / 2006-03-17(美国) / 娜塔莉·波特曼 / 雨果·维文 / 斯蒂芬·瑞 / 斯蒂芬·弗雷 / 约翰·赫特 / 蒂姆·皮戈特-史密斯 / 鲁珀特·格雷夫斯 / 罗杰·阿拉姆 / 本·迈尔斯 / 西妮德·库萨克 / 娜塔莎·怀特曼 / 约翰·斯坦丁 / 埃迪·马森 / 克里夫·阿什伯恩 / Emma Field-Rayner / 伊安·布尔费尔德 / Mark Phoenix / Alister Mazzotti / 比莉·库克 / 盖伊·亨利 / 科斯马·肖 / Megan Gay / Roderic Culver / Tara Hacking / 安迪·莱什利兹 / 查德·斯塔赫斯基 / 布拉德利·斯蒂夫·福特 / 马德琳·拉基克-普拉特 / 塞丽娜·贾尔斯 / 卡斯腾·海斯 / 伊莫琴·普茨 / 劳拉·格林伍德 / Kyra Meyer / 玛丽·萧克莱  / 理查德·莱恩 / Michael Simkins / 大卫·雷奇 / 马尔科姆·辛克莱 / 马迪斯·兰德维尔  / Simon Newby / 保罗·安东尼·巴伯 / 美国 / 英国 / 德国 / 詹姆斯·麦克特格 / 132分钟 / V字仇杀队 / 剧情 / 动作 / 科幻 / 惊悚 / 安迪·沃卓斯基 Andy Wachowski / 拉里·沃卓斯基 Lana Wachowski / 英语</div>
     </div>
 </div>
 
@@ -2564,7 +2620,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2580105745.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2588072875.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/30438115/">性爱自修室 第二季 / Sex Education Season 2</a>
@@ -2954,7 +3010,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p457631605.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2219586434.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1292223/">七宗罪 / Se7en</a>
@@ -3736,7 +3792,7 @@ function commentCount(n){
   } catch (e) {
     return false
   }
-}</script></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatars.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Letian</div><div class="author-info__description">记录一下大学期间的学习历程</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">4</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">5</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">5</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/li-letian" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:liletian@tongji.edu.cn" target="_blank"><i class="fas fa-envelope-open" aria-hidden="true"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=240125963&amp;site=qq&amp;menu=yes" target="_blank"><i class="fab fa-qq" aria-hidden="true"></i></a><a class="social-icon" href="https://www.zhihu.com/people/li-le-13-57" target="_blank"><i class="fab fa-zhihu" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">你来啦♪（＾∀＾●）ﾉｼ（●´∀｀）♪欢迎光临</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"> <div class="aside-recent-post"><a href="/luoguchunjiduoxiaoxunlian/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e58696b6127cc071315ee95.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="洛谷春季多校训练" alt="洛谷春季多校训练"/></div><div class="aside-post-title"><div class="aside-post_title" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练">洛谷春季多校训练</div><time class="aside-post_meta post-meta__date">2020-02-29</time></div></a></div><div class="aside-recent-post"><a href="/guojitiaoqiai/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e57de516127cc071309002e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="国际跳棋AI" alt="国际跳棋AI"/></div><div class="aside-post-title"><div class="aside-post_title" href="/guojitiaoqiai/" title="国际跳棋AI">国际跳棋AI</div><time class="aside-post_meta post-meta__date">2020-02-24</time></div></a></div><div class="aside-recent-post"><a href="/yongvscodecmderxiedaima/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e3ea9df2fb38b8c3c2dccfa.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="用Vscode+Cmder写代码" alt="用Vscode+Cmder写代码"/></div><div class="aside-post-title"><div class="aside-post_title" href="/yongvscodecmderxiedaima/" title="用Vscode+Cmder写代码">用Vscode+Cmder写代码</div><time class="aside-post_meta post-meta__date">2020-02-08</time></div></a></div><div class="aside-recent-post"><a href="/githubpageshexodajianjingtaiboke/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="GithubPages+Hexo搭建静态博客" alt="GithubPages+Hexo搭建静态博客"/></div><div class="aside-post-title"><div class="aside-post_title" href="/githubpageshexodajianjingtaiboke/" title="GithubPages+Hexo搭建静态博客">GithubPages+Hexo搭建静态博客</div><time class="aside-post_meta post-meta__date">2020-01-11</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside-category-item">       <li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="aside-category-list_name">开发工具</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><span class="aside-category-list_name">搭建博客</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="aside-category-list_name">算法</span><span class="aside-category-list_length">1</span></a></li><ul class="aside-category-item child"><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/"><span class="aside-category-list_name">题解</span><span class="aside-category-list_length">1</span></a></li></ul><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8D%9A%E5%BC%88/"><span class="aside-category-list_name">计算机博弈</span><span class="aside-category-list_length">1</span></a></li></ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/algorithm/" style="font-size: 24px; color: #99a9bf">algorithm</a> <a href="/tags/blog/" style="font-size: 16px; color: #999">blog</a> <a href="/tags/c-c/" style="font-size: 16px; color: #999">c/c++</a> <a href="/tags/game/" style="font-size: 16px; color: #999">game</a> <a href="/tags/ide/" style="font-size: 16px; color: #999">ide</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/"><span class="archive-list-date">2020年02月</span><span class="archive-list-count">3</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/"><span class="archive-list-date">2020年01月</span><span class="archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">4</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="6/26/2019 00:00:00">     </div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">18.7k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Letian</div><div class="footer_custom_text">康完辣(`･ω･´)别走啊再康康呗</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+}</script></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">你来啦♪（＾∀＾●）ﾉｼ（●´∀｀）♪欢迎光临</div></div></div><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatars.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Letian</div><div class="author-info__description">记录一下大学期间的学习历程</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">5</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">7</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/li-letian" target="_blank" title=""><i class="fab fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:liletian@tongji.edu.cn" target="_blank" title=""><i class="fas fa-envelope-open" aria-hidden="true"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=240125963&amp;site=qq&amp;menu=yes" target="_blank" title=""><i class="fab fa-qq" aria-hidden="true"></i></a><a class="social-icon" href="https://www.zhihu.com/people/li-le-13-57" target="_blank" title=""><i class="fab fa-zhihu" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-map"><div class="card-content"><div class="item-headline"><i class="fas fa-globe-asia" aria-hidden="true"></i><span>访客地图</span></div><script id="clstr_globe" type="text/javascript" src="//cdn.clustrmaps.com/globe.js?d=DYPc14DwjI2eI4KHXS7NQtsnljlckm1b07YyPH5v7I0"></script></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"> <div class="aside-recent-post"><a href="/xiewendangchangyongyufa/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e5869796127cc071315f00f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="写文档常用语法" alt="写文档常用语法"/></div><div class="aside-post-title"><div class="aside-post_title" href="/xiewendangchangyongyufa/" title="写文档常用语法">写文档常用语法</div><time class="aside-post_meta post-meta__date" title="发表于 2020-03-18 09:54:19">2020-03-18</time></div></a></div><div class="aside-recent-post"><a href="/luoguchunjiduoxiaoxunlian/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e58696b6127cc071315ee95.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="洛谷春季多校训练" alt="洛谷春季多校训练"/></div><div class="aside-post-title"><div class="aside-post_title" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练">洛谷春季多校训练</div><time class="aside-post_meta post-meta__date" title="发表于 2020-02-29 17:31:02">2020-02-29</time></div></a></div><div class="aside-recent-post"><a href="/guojitiaoqiai/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e57de516127cc071309002e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="国际跳棋AI" alt="国际跳棋AI"/></div><div class="aside-post-title"><div class="aside-post_title" href="/guojitiaoqiai/" title="国际跳棋AI">国际跳棋AI</div><time class="aside-post_meta post-meta__date" title="发表于 2020-02-24 14:58:54">2020-02-24</time></div></a></div><div class="aside-recent-post"><a href="/yongvscodecmderxiedaima/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e3ea9df2fb38b8c3c2dccfa.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="用Vscode+Cmder写代码" alt="用Vscode+Cmder写代码"/></div><div class="aside-post-title"><div class="aside-post_title" href="/yongvscodecmderxiedaima/" title="用Vscode+Cmder写代码">用Vscode+Cmder写代码</div><time class="aside-post_meta post-meta__date" title="发表于 2020-02-08 20:21:36">2020-02-08</time></div></a></div><div class="aside-recent-post"><a href="/githubpageshexodajianjingtaiboke/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="GithubPages+Hexo搭建静态博客" alt="GithubPages+Hexo搭建静态博客"/></div><div class="aside-post-title"><div class="aside-post_title" href="/githubpageshexodajianjingtaiboke/" title="GithubPages+Hexo搭建静态博客">GithubPages+Hexo搭建静态博客</div><time class="aside-post_meta post-meta__date" title="发表于 2020-01-11 23:08:41">2020-01-11</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside-category-item">       <li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="aside-category-list_name">开发工具</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><span class="aside-category-list_name">搭建博客</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%96%87%E6%9C%AC%E8%AF%AD%E8%A8%80/"><span class="aside-category-list_name">文本语言</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="aside-category-list_name">算法</span><span class="aside-category-list_length">1</span></a></li><ul class="aside-category-item child"><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/"><span class="aside-category-list_name">题解</span><span class="aside-category-list_length">1</span></a></li></ul><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8D%9A%E5%BC%88/"><span class="aside-category-list_name">计算机博弈</span><span class="aside-category-list_length">1</span></a></li></ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/algorithm/" style="font-size: 24px; color: #99a9bf">algorithm</a> <a href="/tags/blog/" style="font-size: 16px; color: #999">blog</a> <a href="/tags/c-c/" style="font-size: 16px; color: #999">c/c++</a> <a href="/tags/game/" style="font-size: 16px; color: #999">game</a> <a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a> <a href="/tags/ide/" style="font-size: 16px; color: #999">ide</a> <a href="/tags/markdown/" style="font-size: 16px; color: #999">markdown</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/"><span class="archive-list-date">2020年03月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/"><span class="archive-list-date">2020年02月</span><span class="archive-list-count">3</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/"><span class="archive-list-date">2020年01月</span><span class="archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">5</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="6/26/2019 00:00:00">     </div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">19.6k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic.downk.cc/item/5e3192e92fb38b8c3ce91b19.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Letian</div><div class="footer_custom_text">康完辣(`･ω･´)别走啊再康康呗</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
  <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/sakura.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 document.body.addEventListener('input', POWERMODE);
