@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++学习笔记 | Letian</title><meta name="description" content="从C到C++的思维转变和一些自己学习到的实用技巧"><meta name="keywords" content="c/c++,stl"><meta name="author" content="Letian"><meta name="copyright" content="Letian"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="C++学习笔记"><meta name="twitter:description" content="从C到C++的思维转变和一些自己学习到的实用技巧"><meta name="twitter:image" content="https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png"><meta property="og:type" content="article"><meta property="og:title" content="C++学习笔记"><meta property="og:url" content="https://li-letian.github.io/cxuexibiji/"><meta property="og:site_name" content="Letian"><meta property="og:description" content="从C到C++的思维转变和一些自己学习到的实用技巧"><meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://li-letian.github.io/cxuexibiji/"><link rel="prev" title="洛谷春季多校训练" href="https://li-letian.github.io/luoguchunjiduoxiaoxunlian/"><link rel="next" title="常用图论模板" href="https://li-letian.github.io/changyongtulunmoban/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://letian.website","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"(°ー°〃),(＃°Д°),(。□。),(ノ_<),( ^ω^),(≧ω≦ ),( ΘωΘ),(●′ω`●),(๑￫ܫ￩),(oﾟωﾟo),Σ(°△°)︴,╮(╯▽╰)╭","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-center"},
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: true,
+  isPhotoFigcaption: true
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatars.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#命名"><span class="toc-number">1.</span> <span class="toc-text">命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数实现"><span class="toc-number">2.</span> <span class="toc-text">函数实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类设计"><span class="toc-number">3.</span> <span class="toc-text">类设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件结构"><span class="toc-number">4.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量与类型"><span class="toc-number">5.</span> <span class="toc-text">变量与类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理和调试"><span class="toc-number">6.</span> <span class="toc-text">异常处理和调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#STL"><span class="toc-number">7.</span> <span class="toc-text">STL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存"><span class="toc-number">8.</span> <span class="toc-text">内存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他库"><span class="toc-number">9.</span> <span class="toc-text">其他库</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="post-bg" id="nav" style="background-image: url(https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Letian</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 别学了</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 听听音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 康康电影</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">C++学习笔记</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-02-28 09:36:52"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-02-28</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-04-12 19:29:19"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-04-12</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/c/">c++</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon far fa-file-word" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">625</span><span class="post-meta__separator">|</span><i class="post-meta__icon far fa-clock" aria-hidden="true"></i><span>阅读时长: 2 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon far fa-comments" aria-hidden="true"></i><span>评论数:</span><a href="/cxuexibiji/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container">
+    <div id="aplayer-MWCVfXpj" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="28959298" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"
+    ></div>
+<p><del>天坑待填</del></p>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>使用google标准</p>
+<h2 id="函数实现"><a href="#函数实现" class="headerlink" title="函数实现"></a>函数实现</h2><p>尽量用默认参数列表</p>
+<p>开始一定要参数校验</p>
+<p>函数返回值返回是否能够信任</p>
+<p>static保证变量生命周期</p>
+<p>尽量使用局部变量</p>
+<p>大量使用对常量的引用来传递参数</p>
+<p>尽量返回常量引用实现封闭性</p>
+<p>大量使用函数指针实现算法无关</p>
+<p>大量使用模板实现类型无关</p>
+<p>大量使用stl来解决问题</p>
+<p>保证好一点的时间复杂度</p>
+<p>可以使用尾置返回类型声明复杂指针</p>
+<p>尾部可声明throw性质</p>
+<h2 id="类设计"><a href="#类设计" class="headerlink" title="类设计"></a>类设计</h2><p>default构造函数</p>
+<p>可变成员加mutable可无视const</p>
+<p>函数加const维持this的常量性质</p>
+<p>类内初始值</p>
+<p>委托构造函数</p>
+<p>声明和定义</p>
+<p>友元</p>
+<p>explicit</p>
+<p>静态成员</p>
+<h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><p>预处理头文件保护</p>
+<p>#ifndef 标志</p>
+<p>#define 标志</p>
+<p>定义类或者引用头文件</p>
+<p>#endif</p>
+<p>extern实现函数和变量跨文件</p>
+<p>namespace实现哪里的文件都不重名</p>
+<p>类一般定义在头中文件并且文件名一般和类的名字一致</p>
+<h2 id="变量与类型"><a href="#变量与类型" class="headerlink" title="变量与类型"></a>变量与类型</h2><p>指针*和引用符号&amp;和变量名字和const位置从右到左阅读</p>
+<p>auto和decltype()关键字自动识别类型</p>
+<p>using ll=long long和typedef long long ll声明类型别名</p>
+<p>const实现变量的底层和顶层常量性</p>
+<p>static实现变量的生命周期的延长</p>
+<p>constexpr才是真正的编译器求值的常数</p>
+<p>nullptr是空指针</p>
+<p>std::nothrow申请new</p>
+<p>强制类型转换</p>
+<p>double slope </p>
+<p>= static_cast<double> (j) / i; </p>
+<p>常量变量转换</p>
+<p>char *P =</p>
+<p>const_cast<char*> (pc) ; </p>
+<p>通用</p>
+<p>dynamic_cast </p>
+<h2 id="异常处理和调试"><a href="#异常处理和调试" class="headerlink" title="异常处理和调试"></a>异常处理和调试</h2><p>随时throw一个string</p>
+<p>主函数中就try</p>
+<p>主函数catch好string类型</p>
+<p>用ifdef DEBUG调试</p>
+<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><p>vector</p>
+<p>string</p>
+<p>streaming file</p>
+<p>一切变量的下标都用decltype定义</p>
+<p>使用范围for语句来进行非修改的遍历，并且尽量使用对常量的引用</p>
+<p>尽量使用stl和迭代器</p>
+<p>迭代器访问过程不要向容器添加元素</p>
+<p>可以直接列表初始化</p>
+<p>使用function object中重载的括弧运算符</p>
+<p>还有个adaptor bind1st not1</p>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>c++中的内存分5个区</p>
+<p>new关键词做三件事 调用operator new申请free store内存 调用构造函数 类型转换</p>
+<p>右值引用机制，最迟调用变量的分配</p>
+<p>引用计数机制</p>
+<p>善用new和delete，一定记得delete</p>
+<p>因为delete会调用析构函数</p>
+<h2 id="其他库"><a href="#其他库" class="headerlink" title="其他库"></a>其他库</h2><p>cctype</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Letian</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://li-letian.github.io/cxuexibiji/">https://li-letian.github.io/cxuexibiji/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://li-letian.github.io" target="_blank">Letian</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/c-c/">c/c++</a><a class="post-meta__tags" href="/tags/stl/">stl</a></div><div class="post_share"><div class="social-share" data-image="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1613194509,3683268681&amp;fm=26&amp;gp=0.jpg" data-sites="qq,wechat,weibo,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="Wechat"/><div class="post-qr-code__desc">Wechat</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="Alipay"/><div class="post-qr-code__desc">Alipay</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/luoguchunjiduoxiaoxunlian/"><img class="prev_cover lazyload" data-src="https://cdn.luogu.com.cn/fe/logo.png?35e6d0796eab39c4bf304d03e6d332c0" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">洛谷春季多校训练</div></div></a></div><div class="next-post pull_right"><a href="/changyongtulunmoban/"><img class="next_cover lazyload" data-src="https://yqfile.alicdn.com/img_c04528350f20f88716cbc509631ed044.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">常用图论模板</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/guojitiaoqiai/" title="国际跳棋AI"><img class="relatedPosts_cover lazyload"data-src="https://cdn1.iconfinder.com/data/icons/games-and-toys/512/Toys_Games-23-512.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-24</div><div class="relatedPosts_title">国际跳棋AI</div></div></a></div><div class="relatedPosts_item"><a href="/changyongtulunmoban/" title="常用图论模板"><img class="relatedPosts_cover lazyload"data-src="https://yqfile.alicdn.com/img_c04528350f20f88716cbc509631ed044.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-28</div><div class="relatedPosts_title">常用图论模板</div></div></a></div><div class="relatedPosts_item"><a href="/changyongshujujiegoumoban/" title="常用数据结构模板"><img class="relatedPosts_cover lazyload"data-src="http://nimbletech.org/tech-admin/cms/uploads/course/20180922093905data-sturture.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-28</div><div class="relatedPosts_title">常用数据结构模板</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '4ad77e39e9c02d83634d',
+  clientSecret: '7c89673cbbe890335e5e1b97afdeb90ee2c854b6',
+  repo: 'li-letian.github.io',
+  owner: 'li-letian',
+  admin: ['li-letian'],
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN',
+  perPage: 10,
+  distractionFreeMode: false,
+  pagerDirection: 'last',
+  createIssueManually: false,
+  updateCountCallback: commentCount
+})
+gitalk.render('gitalk-container')
+
+function commentCount(n){
+  try {
+    document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+  } catch (e) {
+    return false
+  }
+}</script></div></article></main><footer id="footer" style="background-image: url(https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Letian</div><div class="footer_custom_text">康完辣(`･ω･´)别走啊再康康呗</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/sakura.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script>if (document.getElementsByClassName('mermaid').length) {
+  loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',function () {
+    mermaid.initialize({
+      theme: 'default',
+  })
+})
+}</script></body></html>
