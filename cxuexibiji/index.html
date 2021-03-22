@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++学习笔记 | Letian</title><meta name="keywords" content="c/c++,stl"><meta name="author" content="Letian"><meta name="copyright" content="Letian"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="从C到C++的思维转变和一些自己学习到的实用技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++学习笔记">
+<meta property="og:url" content="https://li-letian.github.io/cxuexibiji/">
+<meta property="og:site_name" content="Letian">
+<meta property="og:description" content="从C到C++的思维转变和一些自己学习到的实用技巧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png">
+<meta property="article:published_time" content="2020-02-28T01:36:52.000Z">
+<meta property="article:modified_time" content="2020-11-16T15:57:08.310Z">
+<meta property="article:author" content="Letian">
+<meta property="article:tag" content="c&#x2F;c++">
+<meta property="article:tag" content="stl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://li-letian.github.io/cxuexibiji/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-11-16 23:57:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatars.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 别学了</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%AC%E5%90%AC%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%BA%B7%E5%BA%B7%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Letian</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 别学了</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%AC%E5%90%AC%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%BA%B7%E5%BA%B7%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C++学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-02-28T01:36:52.000Z" title="发表于 2020-02-28 09:36:52">2020-02-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-16T15:57:08.310Z" title="更新于 2020-11-16 23:57:08">2020-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/c/">c++</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">847</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C++学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container">
+    <div id="aplayer-FKinZeMb" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="28959298" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"
+    ></div>
+<p><s>天坑待填</s></p>
+<p>正在C++ Primer配合CSAPP食用</p>
+<p><strong>命名</strong></p>
+<p>使用google标准</p>
+<p><strong>函数实现</strong></p>
+<p>尽量用默认参数列表</p>
+<p>开始一定要参数校验</p>
+<p>函数返回值返回是否能够信任</p>
+<p>static保证变量生命周期</p>
+<p>尽量使用局部变量</p>
+<p>大量使用对常量的引用来传递参数</p>
+<p>尽量返回常量引用实现封闭性</p>
+<p>大量使用函数指针实现算法无关</p>
+<p>大量使用模板实现类型无关</p>
+<p>大量使用stl来解决问题</p>
+<p>保证好一点的时间复杂度</p>
+<p>可以使用尾置返回类型声明复杂指针</p>
+<p>尾部可声明throw性质</p>
+<p>使用function object中重载的括弧运算符</p>
+<p>容器和函数的adaptor</p>
+<p>lambda可以当作bind函数用</p>
+<p>bind可以绑定某个函数的某些参数</p>
+<p>fuction type</p>
+<p>函数表</p>
+<p>使用function object中重载的括弧运算符</p>
+<p>lambda可以当作bind函数用</p>
+<p>bind可以绑定某个函数的某些参数</p>
+<p><strong>类设计</strong></p>
+<p>可变成员加mutable可无视const</p>
+<p>函数加const维持this的常量性质</p>
+<p>类内初始值</p>
+<p>委托构造函数</p>
+<p>声明和定义</p>
+<p>friend声明开放private的友元</p>
+<p>explicit放在声明前抑制由单参数构造函数确定的隐式转换</p>
+<p>static声明静态成员</p>
+<p>赋值运算使用拷贝交换</p>
+<p><strong>面向对象设计</strong></p>
+<p>virtual关键字</p>
+<p>定义类型和当前值的类型</p>
+<p>继承overloading和overriding</p>
+<p>父类子类</p>
+<p>公有继承：is a</p>
+<p><strong>跨文件</strong></p>
+<p>预处理头文件保护</p>
+<p>#ifndef 标志</p>
+<p>#define 标志</p>
+<p>定义类或者引用头文件</p>
+<p>#endif</p>
+<p>extern实现变量跨文件</p>
+<p>类一般定义在头中文件并且文件名一般和类的名字一致</p>
+<p><strong>变量类型</strong></p>
+<p>指针*和引用符号&amp;和变量名字和const位置从右到左阅读</p>
+<p>auto和decltype()关键字自动识别类型</p>
+<p>using ll=long long和typedef long long ll声明类型别名</p>
+<p>const实现变量的底层和顶层常量性</p>
+<p>static实现变量的生命周期的延长</p>
+<p>constexpr才是真正的编译器求值的常数</p>
+<p>nullptr是空指针</p>
+<p>std::nothrow申请new</p>
+<p>强制类型转换</p>
+<p>double slope</p>
+<p>= static_cast<double> (j) / i;</p>
+<p>常量变量转换</p>
+<p>char *P =</p>
+<p>const_cast&lt;char*&gt; (pc) ;</p>
+<p>通用</p>
+<p>dynamic_cast</p>
+<p>右值引用T &amp;&amp; something保证something即将被销毁因此可以转交内存</p>
+<p>可以对字面值使用右值引用或者对临时结果使用</p>
+<p><strong>异常处理和调试</strong></p>
+<p>随时throw一个string</p>
+<p>主函数中就try</p>
+<p>主函数catch好string类型</p>
+<p>用ifdef DEBUG调试</p>
+<p><strong>STL</strong></p>
+<p>vector</p>
+<p>string</p>
+<p>streaming file</p>
+<p>一切变量的下标都用decltype定义</p>
+<p>使用范围for语句来进行非修改的遍历，并且尽量使用对常量的引用</p>
+<p>尽量使用stl和迭代器</p>
+<p>迭代器访问过程不要向容器添加元素</p>
+<p>可以直接列表初始化</p>
+<p>back-inserter返回可插入位置的迭代器</p>
+<p>关联容器</p>
+<p>adaptor</p>
+<p><strong>IO</strong></p>
+<p>stream的iterator</p>
+<p>stream</p>
+<p>fstream</p>
+<p>stringstream</p>
+<p><strong>内存机制</strong></p>
+<p>c++中的内存分5个区</p>
+<p>new关键词做三件事 调用operator new申请free store内存 调用构造函数 类型转换</p>
+<p>右值引用机制，最迟调用变量的分配</p>
+<p>引用计数机制</p>
+<p>善用new和delete，一定记得delete</p>
+<p>因为delete会调用析构函数</p>
+<p>智能指针shared-ptr&lt;&gt;= make-shared&lt;&gt;()</p>
+<p>unique-ptr</p>
+<p><strong>判断字符类型的库</strong></p>
+<p>cctype</p>
+<p>isalpha</p>
+<p>isdigit</p>
+<p>isupper</p>
+<p>islower</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Letian</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://li-letian.github.io/cxuexibiji/">https://li-letian.github.io/cxuexibiji/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://li-letian.github.io" target="_blank">Letian</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/c-c/">c/c++</a><a class="post-meta__tags" href="/tags/stl/">stl</a></div><div class="post_share"><div class="social-share" data-image="https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png" data-sites="qq,wechat,weibo,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/luoguchunjiduoxiaoxunlian/"><img class="prev-cover" src="https://pic.downk.cc/item/5f9c02e31cd1bbb86b4adc7d.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">洛谷春季多校训练</div></div></a></div><div class="next-post pull-right"><a href="/changyongsuanfataolu/"><img class="next-cover" src="https://media.geeksforgeeks.org/wp-content/uploads/autometa1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">常用算法套路</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/cocos2dxxuexibiji/" title="Cocos2dx学习笔记"><img class="cover" src="https://pic.downk.cc/item/5f9c01e91cd1bbb86b4a8b3c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-08</div><div class="title">Cocos2dx学习笔记</div></div></a></div><div><a href="/dafuweng/" title="大富翁"><img class="cover" src="https://pic.downk.cc/item/5f9c05df1cd1bbb86b4bdb61.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-08</div><div class="title">大富翁</div></div></a></div><div><a href="/guojitiaoqiai/" title="国际跳棋AI"><img class="cover" src="https://cdn1.iconfinder.com/data/icons/games-and-toys/512/Toys_Games-23-512.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-24</div><div class="title">国际跳棋AI</div></div></a></div><div><a href="/changyongsuanfataolu/" title="常用算法套路"><img class="cover" src="https://media.geeksforgeeks.org/wp-content/uploads/autometa1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-27</div><div class="title">常用算法套路</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatars.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Letian</div><div class="author-info__description">普通大学生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/li-letian"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/li-letian" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liletian@tongji.edu.cn" target="_blank" title=""><i class="fas fa-envelope-open"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=240125963&amp;site=qq&amp;menu=yes" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="https://www.zhihu.com/people/li-le-13-57" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">你来啦♪（＾∀＾●）ﾉｼ（●´∀｀）♪欢迎光临</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/tongguogityugithubjinxingbanbenkongzhiyuduorenxiezuo/" title="通过Git与GitHub进行版本控制与多人协作"><img src="https://img.imgdb.cn/item/6058b6c48322e6675cb8b010.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过Git与GitHub进行版本控制与多人协作"/></a><div class="content"><a class="title" href="/tongguogityugithubjinxingbanbenkongzhiyuduorenxiezuo/" title="通过Git与GitHub进行版本控制与多人协作">通过Git与GitHub进行版本控制与多人协作</a><time datetime="2020-08-31T03:06:39.000Z" title="发表于 2020-08-31 11:06:39">2020-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/cocos2dxxuexibiji/" title="Cocos2dx学习笔记"><img src="https://pic.downk.cc/item/5f9c01e91cd1bbb86b4a8b3c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cocos2dx学习笔记"/></a><div class="content"><a class="title" href="/cocos2dxxuexibiji/" title="Cocos2dx学习笔记">Cocos2dx学习笔记</a><time datetime="2020-05-08T07:50:01.000Z" title="发表于 2020-05-08 15:50:01">2020-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/dafuweng/" title="大富翁"><img src="https://pic.downk.cc/item/5f9c05df1cd1bbb86b4bdb61.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大富翁"/></a><div class="content"><a class="title" href="/dafuweng/" title="大富翁">大富翁</a><time datetime="2020-05-08T07:49:44.000Z" title="发表于 2020-05-08 15:49:44">2020-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/xiewendangchangyongyufa/" title="写文档常用语法"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1613194509,3683268681&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写文档常用语法"/></a><div class="content"><a class="title" href="/xiewendangchangyongyufa/" title="写文档常用语法">写文档常用语法</a><time datetime="2020-03-18T01:54:19.000Z" title="发表于 2020-03-18 09:54:19">2020-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练"><img src="https://pic.downk.cc/item/5f9c02e31cd1bbb86b4adc7d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="洛谷春季多校训练"/></a><div class="content"><a class="title" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练">洛谷春季多校训练</a><time datetime="2020-02-29T09:31:02.000Z" title="发表于 2020-02-29 17:31:02">2020-02-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://www.geeksforgeeks.org/wp-content/uploads/titleShadow-768x256.png')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Letian</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">康完辣(`･ω･´)别走啊再康康呗</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '4ad77e39e9c02d83634d',
+      clientSecret: '7c89673cbbe890335e5e1b97afdeb90ee2c854b6',
+      repo: 'li-letian.github.io',
+      owner: 'li-letian',
+      admin: ['li-letian'],
+      id: '72b5cde7d73ee7b2835e963c2f106b88',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="(°ー°〃),(＃°Д°),(。□。),(ノ_&lt;),( ^ω^),(≧ω≦ ),( ΘωΘ),(●′ω`●),(๑￫ܫ￩),(oﾟωﾟo),Σ(°△°)︴,╮(╯▽╰)╭" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

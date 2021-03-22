@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GithubPages+Hexo搭建静态博客 | Letian</title><meta name="keywords" content="hexo,blog,博客"><meta name="author" content="Letian"><meta name="copyright" content="Letian"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="零基础一步一步搭建自己的个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GithubPages+Hexo搭建静态博客">
+<meta property="og:url" content="https://li-letian.github.io/githubpageshexodajianjingtaiboke/">
+<meta property="og:site_name" content="Letian">
+<meta property="og:description" content="零基础一步一步搭建自己的个人博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586670938139&di=d354678eb6334fae51715f73491aaefd&imgtype=0&src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-817dd6dcdc15ecb238a4a80cbbc689da_1200x500.jpg">
+<meta property="article:published_time" content="2020-01-11T15:08:41.000Z">
+<meta property="article:modified_time" content="2021-03-22T15:27:07.014Z">
+<meta property="article:author" content="Letian">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586670938139&di=d354678eb6334fae51715f73491aaefd&imgtype=0&src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-817dd6dcdc15ecb238a4a80cbbc689da_1200x500.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://li-letian.github.io/githubpageshexodajianjingtaiboke/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-03-22 23:27:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatars.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 别学了</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%AC%E5%90%AC%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%BA%B7%E5%BA%B7%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586670938139&amp;di=d354678eb6334fae51715f73491aaefd&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-817dd6dcdc15ecb238a4a80cbbc689da_1200x500.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Letian</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于俺</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 大佬们</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 别学了</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%90%AC%E5%90%AC%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E5%BA%B7%E5%BA%B7%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">GithubPages+Hexo搭建静态博客</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-01-11T15:08:41.000Z" title="发表于 2020-01-11 23:08:41">2020-01-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-03-22T15:27:07.014Z" title="更新于 2021-03-22 23:27:07">2021-03-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="GithubPages+Hexo搭建静态博客"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container">
+    <div id="aplayer-VZwRzekK" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="4225524" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#49b1f5"
+    ></div>
+<p><strong>第一篇博客当然是用来记录搭建博客的过程辣</strong>😄</p>
+<p>我们采用<code>GitHub Pages</code>+<code>Hexo</code>+<code>Typora</code>来完成整个博客的搭建、运行和创作</p>
+<div class="note info">
+            <h2 id="整个过程需要以下一些软件、插件或者网站的支持"><a class="header-anchor" href="#整个过程需要以下一些软件、插件或者网站的支持"></a>整个过程需要以下一些软件、插件或者网站的支持</h2><ol><li><code>GitHub Pages</code>提供静态博客的远程服务器</li><li><code>Node.js</code>提供<code>Hexo</code>运行环境和更多功能的插件扩展</li><li><code>Git</code>提供<code>Hexo</code>提交文件并部署到<code>GitHub Pages</code>功能</li><li><code>Hexo</code>提供博客网页文件的生成和预览</li><li><code>BNXB</code>提供第三方<code>DNS</code>解析服务商接入<code>Cloudflare</code>的<code>CDN</code>接口</li><li><code>Typora</code>提供优秀的<code>markdown</code>写作环境</li></ol>
+          </div>
+<p>全程免费稳定，自定义程度极高</p>
+<p>最终生成的博客网址是 <code>你的GitHub用户名.github.io</code></p>
+<p>当然也支持绑定自己购买的付费域名</p>
+<h2 id="安装Node-js"><a class="header-anchor" href="#安装Node-js"></a>安装<code>Node.js</code></h2>
+<p>安装<a href="https://nodejs.org/en" target="_blank" rel="noopener">Node.js</a>环境并在Path中添加环境变量</p>
+<p>具体教程见<a href="https://www.cnblogs.com/zhouyu2017/p/6485265.html" target="_blank" rel="noopener">链接</a></p>
+<p>安装完毕后在命令行中检查版本，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>出现版本号证明安装成功</p>
+<h2 id="安装Git并配置SSH-key"><a class="header-anchor" href="#安装Git并配置SSH-key"></a>安装<code>Git</code>并配置<code>SSH key</code></h2>
+<p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>并在Path中添加环境变量</p>
+<p>然后需要配置电脑本机的<code>SSH key</code>到你的<code>GitHub</code>账号</p>
+<p>具体教程见<a href="https://www.cnblogs.com/mingyue5826/p/11141324.html" target="_blank" rel="noopener">链接</a></p>
+<h2 id="安装Hexo"><a class="header-anchor" href="#安装Hexo"></a>安装<code>Hexo</code></h2>
+<p>在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>安装完毕后在命令行中检查版本，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>出现版本号证明安装成功</p>
+<p>接下来安装<code>hexo-deployer-git</code>插件</p>
+<p>在命令行输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="建站"><a class="header-anchor" href="#建站"></a>建站</h2>
+<p>在<code>GitHub</code>上new一个名为<code>yourusername.github.io</code>的repository</p>
+<p>记得一定一定要命名为<code>你的GitHub用户名.github.io</code>的形式</p>
+<p>然后在本地的一个你习惯的路径建立一个文件夹，这里就是你以后存储博文的地方，命令行输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>然后将<code>__config</code>中的配置更改为相应的配置</p>
+<p>最重要的是后面的<code>deploy</code>配置，一定要改为<code>git</code>和你GitHub Pages仓库ssh</p>
+<p>每次写完博客，我们都会用hexo将这个文件夹里的项目组织生成一套网页文件，并由hexo用git提交到上面的仓库里</p>
+<p>具体配置的更改参见<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">HexoDocs</a></p>
+<h2 id="选择主题"><a class="header-anchor" href="#选择主题"></a>选择主题</h2>
+<p><code>Hexo</code>的默认主题是<code>landscape</code>，当然非常难看了</p>
+<p>你可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">HexoThemes</a>选择一个喜欢的主题</p>
+<p>进入作者的GitHub repository然后把主题clone下来</p>
+<p>然后放入博客文件夹中的themes中</p>
+<p>通过更改相应主题文件夹下的<code>__config</code>中相应的配置可以有更多的玩法</p>
+<p>我使用的主题是<a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></p>
+<p>里面集成了一些例如<code>Gitalk</code>等其他一些<code>Hexo</code>插件，并且主题配色很舒服，功能比较多</p>
+<p>原作者也提供了很齐全的个性化配置选项</p>
+<p>我们也可以增加一些自己喜欢的功能插件</p>
+<p>作者在<a href="https://jerryc.me/posts/21cfbf15/" target="_blank" rel="noopener">Butterfly Document</a>中详细介绍了主题的安装办法</p>
+<p>在你一步一步更改了所有的主题配置后就可以生成网页预览并部署到远程了</p>
+<p>将你的所有文件和配置生成网页</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>预览网页</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>部署到<code>GitHub</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="绑定域名"><a class="header-anchor" href="#绑定域名"></a>绑定域名</h2>
+<p>这一步是可选操作</p>
+<p>最终的博客网址是 <code>你的GitHub用户名.github.io</code></p>
+<p>我们如果有自己的域名的话可以选择绑定自己的域名</p>
+<p>我的域名<code>letian.website</code>是在腾讯云购买的，并且我觉得它用于搭建个人网站或者个人邮箱非常的合适，价格也很实惠</p>
+<p><s>根本买不起.com和.cn这种超级贵的域名</s></p>
+<p>在腾讯云查询域名注册并经过漫长的精挑细选再下单支付，最后实名认证后就可以进行绑定了</p>
+<p>首先在博客文件夹根目录的<code>sourse</code>中增加一个无后缀的名为<code>CNAME</code>的文件，并用<code>notepad++</code>或<code>vscode</code>类的编辑器写入你的域名，例如<code>letian.website</code></p>
+<p>然后在你购买域名的相应的域名管理网页增加两条域名解析</p>
+<div class="note primary">
+            <p>@ CNAME 线路默认 GitHubPages仓库名 其余默认</p><p>www CNAME 线路默认 GitHubPages仓库名 其余默认</p>
+          </div>
+<p>要过上10分钟才能成功访问，别急哦</p>
+<p>如果还是显示不了或者乱跳转，八成是以前进入本域名的自动跳转缓存没有清除，在浏览器中选择清除最近一段时间的缓存再访问即可</p>
+<h2 id="日常写作"><a class="header-anchor" href="#日常写作"></a>日常写作</h2>
+<p>在命令行运行相应的<a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">HexoDocs</a>中的命令即可生成相应文件</p>
+<p>建议使用<code>Typora</code>搭配图床写作</p>
+<p>最后记得部署到远程仓库即可</p>
+<h2 id="增加CDN"><a class="header-anchor" href="#增加CDN"></a>增加<code>CDN</code></h2>
+<p>众所周知，<code>GitHub</code>的服务器由于一些奇怪的原因，国内访问速度非常的堪忧</p>
+<p>所以我们可以采用<code>CDN</code>来完成访问加速</p>
+<p>国内的<code>CDN</code>都要求域名备案</p>
+<p>因此我们选用<code>BNXB</code>并通过国内的<code>DNS</code>解析服务商将域名解析到<code>Cloudflare</code>的<code>CDN</code></p>
+<p>首先到<code>Cloudflare</code>注册账号，绑定域名并选用免费套餐，验证邮件</p>
+<p>然后到<code>BNXB</code>通过刚刚注册的账号登录，并选用<code>CNAME</code>方式接入，然后在<code>BNXB</code>的解析记录中添加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ CNAME 线路默认 GitHubPages仓库名 CDN开启 其余默认</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www CNAME 线路默认 GitHubPages仓库名 CDN开启  其余默认</span><br></pre></td></tr></table></figure>
+<p>然后将底下生成的域名<code>DNS</code>处<code>CNAME</code>记录对应的记录粘贴到购买域名网页的域名解析中，更改原有的直接解析</p>
+<p>这样就完成了跳转解析</p>
+<p>具体教程见<a href="https://blog.xmgspace.me/archives/cf-custom-ip.html" target="_blank" rel="noopener">链接</a></p>
+<h2 id="配置Gitalk"><a class="header-anchor" href="#配置Gitalk"></a>配置<code>Gitalk</code></h2>
+<p><code>Diaspora</code>主题内置<code>Gitalk</code>插件，可以通过登录<code>GitHub</code>账号在博客文章地下评论，并推送到<code>GitHub</code>的仓库issue中</p>
+<p>首先在<code>GitHub</code>的Settings的最左下方Developer setting中New一个<code>OAuth App</code></p>
+<p>应用名可以随便起，但是<code>Homepage URL</code>一定要是<code>你的GitHub用户名.github.io</code>，描述可以随便写，但是<code>Authorization callback URl</code>一定得是你绑定的域名（如果没有绑定域名则和<code>Homepage URL</code>相同）</p>
+<p>然后Register application</p>
+<p>记下来生成的Client ID和Client Secret</p>
+<p>并将它们按主题作者的<code>README</code>写入主题的<code>__config</code></p>
+<p>具体教程见<a href="https://blog.csdn.net/cirzearchenille/article/details/88802534" target="_blank" rel="noopener">链接</a></p>
+<h2 id="更换Hexo渲染引擎"><a class="header-anchor" href="#更换Hexo渲染引擎"></a>更换<code>Hexo</code>渲染引擎</h2>
+<p><code>Hexo</code>内置的<code>Markdown</code>渲染引擎非常的弱，甚至不支持<code>Emoji</code>，因此我们采用<code>hexo-renderer-markdown-it</code>插件来替换原本的渲染引擎，这样就可以支持很多原本在<code>Typora</code>上支持的语法</p>
+<p>具体教程见<a href="https://www.jianshu.com/p/588ab3d22eb8" target="_blank" rel="noopener">链接</a></p>
+<h2 id="更换主题默认音乐和图片"><a class="header-anchor" href="#更换主题默认音乐和图片"></a>更换主题默认音乐和图片</h2>
+<p>用<a href="https://github.com/MoePlayer/hexo-tag-aplayer/" target="_blank" rel="noopener">Aplayer</a>将网易云音乐的歌单或者歌曲直接按照文档中的格式写入Markdown文件，生成在网页上</p>
+<p>图片直接添加进<code>img</code>文件夹，并替换入主题的<code>__config</code>，这里的图片的像素大小和图片格式最好与原本的默认图片相同</p>
+<p>剩下其他的东西就可以自己探索啦😙</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Letian</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://li-letian.github.io/githubpageshexodajianjingtaiboke/">https://li-letian.github.io/githubpageshexodajianjingtaiboke/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://li-letian.github.io" target="_blank">Letian</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blog/">blog</a></div><div class="post_share"><div class="social-share" data-image="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586670938139&amp;di=d354678eb6334fae51715f73491aaefd&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-817dd6dcdc15ecb238a4a80cbbc689da_1200x500.jpg" data-sites="qq,wechat,weibo,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/yongvscodecmderxiedaima/"><img class="prev-cover" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2650553832,1860857415&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">用Vscode+Cmder写代码</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatars.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Letian</div><div class="author-info__description">普通大学生</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/li-letian"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/li-letian" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liletian@tongji.edu.cn" target="_blank" title=""><i class="fas fa-envelope-open"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=240125963&amp;site=qq&amp;menu=yes" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="https://www.zhihu.com/people/li-le-13-57" target="_blank" title=""><i class="fab fa-zhihu"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">你来啦♪（＾∀＾●）ﾉｼ（●´∀｀）♪欢迎光临</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B%E9%9C%80%E8%A6%81%E4%BB%A5%E4%B8%8B%E4%B8%80%E4%BA%9B%E8%BD%AF%E4%BB%B6%E3%80%81%E6%8F%92%E4%BB%B6%E6%88%96%E8%80%85%E7%BD%91%E7%AB%99%E7%9A%84%E6%94%AF%E6%8C%81"><span class="toc-number">1.</span> <span class="toc-text">整个过程需要以下一些软件、插件或者网站的支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="toc-number">2.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git%E5%B9%B6%E9%85%8D%E7%BD%AESSH-key"><span class="toc-number">3.</span> <span class="toc-text">安装Git并配置SSH key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-number">4.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%99"><span class="toc-number">5.</span> <span class="toc-text">建站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">选择主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-number">7.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%86%99%E4%BD%9C"><span class="toc-number">8.</span> <span class="toc-text">日常写作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0CDN"><span class="toc-number">9.</span> <span class="toc-text">增加CDN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGitalk"><span class="toc-number">10.</span> <span class="toc-text">配置Gitalk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2Hexo%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E"><span class="toc-number">11.</span> <span class="toc-text">更换Hexo渲染引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E9%BB%98%E8%AE%A4%E9%9F%B3%E4%B9%90%E5%92%8C%E5%9B%BE%E7%89%87"><span class="toc-number">12.</span> <span class="toc-text">更换主题默认音乐和图片</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/tongguogityugithubjinxingbanbenkongzhiyuduorenxiezuo/" title="通过Git与GitHub进行版本控制与多人协作"><img src="https://img.imgdb.cn/item/6058b6c48322e6675cb8b010.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过Git与GitHub进行版本控制与多人协作"/></a><div class="content"><a class="title" href="/tongguogityugithubjinxingbanbenkongzhiyuduorenxiezuo/" title="通过Git与GitHub进行版本控制与多人协作">通过Git与GitHub进行版本控制与多人协作</a><time datetime="2020-08-31T03:06:39.000Z" title="发表于 2020-08-31 11:06:39">2020-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/cocos2dxxuexibiji/" title="Cocos2dx学习笔记"><img src="https://pic.downk.cc/item/5f9c01e91cd1bbb86b4a8b3c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cocos2dx学习笔记"/></a><div class="content"><a class="title" href="/cocos2dxxuexibiji/" title="Cocos2dx学习笔记">Cocos2dx学习笔记</a><time datetime="2020-05-08T07:50:01.000Z" title="发表于 2020-05-08 15:50:01">2020-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/dafuweng/" title="大富翁"><img src="https://pic.downk.cc/item/5f9c05df1cd1bbb86b4bdb61.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大富翁"/></a><div class="content"><a class="title" href="/dafuweng/" title="大富翁">大富翁</a><time datetime="2020-05-08T07:49:44.000Z" title="发表于 2020-05-08 15:49:44">2020-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/xiewendangchangyongyufa/" title="写文档常用语法"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1613194509,3683268681&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="写文档常用语法"/></a><div class="content"><a class="title" href="/xiewendangchangyongyufa/" title="写文档常用语法">写文档常用语法</a><time datetime="2020-03-18T01:54:19.000Z" title="发表于 2020-03-18 09:54:19">2020-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练"><img src="https://pic.downk.cc/item/5f9c02e31cd1bbb86b4adc7d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="洛谷春季多校训练"/></a><div class="content"><a class="title" href="/luoguchunjiduoxiaoxunlian/" title="洛谷春季多校训练">洛谷春季多校训练</a><time datetime="2020-02-29T09:31:02.000Z" title="发表于 2020-02-29 17:31:02">2020-02-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586670938139&amp;di=d354678eb6334fae51715f73491aaefd&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-817dd6dcdc15ecb238a4a80cbbc689da_1200x500.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Letian</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">康完辣(`･ω･´)别走啊再康康呗</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '4ad77e39e9c02d83634d',
+      clientSecret: '7c89673cbbe890335e5e1b97afdeb90ee2c854b6',
+      repo: 'li-letian.github.io',
+      owner: 'li-letian',
+      admin: ['li-letian'],
+      id: '8f19c949be4b06162853a2db33d9062e',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="(°ー°〃),(＃°Д°),(。□。),(ノ_&lt;),( ^ω^),(≧ω≦ ),( ΘωΘ),(●′ω`●),(๑￫ܫ￩),(oﾟωﾟo),Σ(°△°)︴,╮(╯▽╰)╭" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

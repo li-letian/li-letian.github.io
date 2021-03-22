@@ -1,15 +1,14 @@
-$(function () {
-  var loadFlag = false
-  $('a.social-icon.search').on('click', function () {
-    $('body').css({ width: '100%', overflow: 'hidden' })
-    $('.search-dialog').css('display', 'block')
-    $('#local-search-input input').focus()
-    $('.search-mask').fadeIn()
+window.addEventListener('load', () => {
+  let loadFlag = false
+  const openSearch = function () {
+    document.body.style.cssText = 'width: 100%;overflow: hidden'
+    document.querySelector('#local-search .search-dialog').style.display = 'block'
+    document.querySelector('#local-search-input input').focus()
+    btf.fadeIn(document.getElementById('search-mask'), 0.5)
     if (!loadFlag) {
       search(GLOBAL_CONFIG.localSearch.path)
       loadFlag = true
     }
-
     // shortcut: ESC
     document.addEventListener('keydown', function f (event) {
       if (event.code === 'Escape') {
@@ -17,62 +16,66 @@ $(function () {
         document.removeEventListener('keydown', f)
       }
     })
+  }
+
+  const closeSearch = function () {
+    document.body.style.cssText = "width: '';overflow: ''"
+    const $searchDialog = document.querySelector('#local-search .search-dialog')
+    $searchDialog.style.animation = 'search_close .5s'
+    setTimeout(() => { $searchDialog.style.cssText = "display: none; animation: ''" }, 500)
+    btf.fadeOut(document.getElementById('search-mask'), 0.5)
+  }
+
+  // click function
+  const searchClickFn = () => {
+    document.querySelector('#search-button > .search').addEventListener('click', openSearch)
+    document.getElementById('search-mask').addEventListener('click', closeSearch)
+    document.querySelector('#local-search .search-close-button').addEventListener('click', closeSearch)
+  }
+
+  searchClickFn()
+
+  // pjax
+  window.addEventListener('pjax:complete', function () {
+    getComputedStyle(document.querySelector('#local-search .search-dialog')).display === 'block' && closeSearch()
+    searchClickFn()
   })
 
-  var closeSearch = function () {
-    $('body').css('width', '')
-    $('body').css('overflow', '')
-    $('.search-dialog').css({
-      animation: 'search_close .5s'
-    })
-
-    $('.search-dialog').animate({}, function () {
-      setTimeout(function () {
-        $('.search-dialog').css({
-          animation: '',
-          display: 'none'
-        })
-      }, 500)
-    })
-
-    $('.search-mask').fadeOut()
-  }
-  $('.search-mask, .search-close-button').on('click touchstart', closeSearch)
-
   function search (path) {
-    $.ajax({
-      url: GLOBAL_CONFIG.root + path,
-      dataType: 'xml',
-      success: function (xmlResponse) {
-        // get the contents from search data
-        var datas = $('entry', xmlResponse).map(function () {
+    fetch(GLOBAL_CONFIG.root + path)
+      .then(response => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, 'text/xml'))
+      .then(data => {
+        const datas = [...data.querySelectorAll('entry')].map(function (item) {
           return {
-            title: $('title', this).text(),
-            content: $('content', this).text(),
-            url: $('url', this).text()
+            title: item.querySelector('title').textContent,
+            content: item.querySelector('content').textContent,
+            url: item.querySelector('url').textContent
           }
-        }).get()
-        var $input = $('#local-search-input input')[0]
-        var $resultContent = $('#local-hits')[0]
+        })
+
+        const $input = document.querySelector('#local-search-input input')
+        const $resultContent = document.getElementById('local-search-results')
         $input.addEventListener('input', function () {
-          var str = '<div class="search-result-list">'
-          var keywords = this.value.trim().toLowerCase().split(/[\s]+/)
+          let str = '<div class="search-result-list">'
+          const keywords = this.value.trim().toLowerCase().split(/[\s]+/)
           $resultContent.innerHTML = ''
-          if (this.value.trim().length <= 0) {
-            $('.local-search-stats__hr').hide()
-            return
-          }
-          var count = 0
+          if (this.value.trim().length <= 0) return
+          let count = 0
           // perform local searching
           datas.forEach(function (data) {
-            var isMatch = true
-            var dataTitle = data.title.trim().toLowerCase()
-            var dataContent = data.content.trim().replace(/<[^>]+>/g, '').toLowerCase()
-            var dataUrl = data.url
-            var indexTitle = -1
-            var indexContent = -1
+            let isMatch = true
+            if (!data.title || data.title.trim() === '') {
+              data.title = 'Untitled'
+            }
+            let dataTitle = data.title.trim().toLowerCase()
+            const dataContent = data.content.trim().replace(/<[^>]+>/g, '').toLowerCase()
+            const dataUrl = data.url.startsWith('/') ? data.url : GLOBAL_CONFIG.root + data.url
+            let indexTitle = -1
+            let indexContent = -1
+            let firstOccur = -1
             // only match artiles with not empty titles and contents
-            if (dataTitle !== '' && dataContent !== '') {
+            if (dataTitle !== '' || dataContent !== '') {
               keywords.forEach(function (keyword, i) {
                 indexTitle = dataTitle.indexOf(keyword)
                 indexContent = dataContent.indexOf(keyword)
@@ -82,23 +85,62 @@ $(function () {
                   if (indexContent < 0) {
                     indexContent = 0
                   }
+                  if (i === 0) {
+                    firstOccur = indexContent
+                  }
                 }
               })
+            } else {
+              isMatch = false
             }
+
             // show search results
             if (isMatch) {
-              str += '<div class="local-search__hit-item"><a href="' + dataUrl + '" class="search-result-title">' + dataTitle + '</a>' + '</div>'
-              count += 1
-              $('.local-search-stats__hr').show()
+              const content = data.content.trim().replace(/<[^>]+>/g, '')
+              if (firstOccur >= 0) {
+                // cut out 130 characters
+                let start = firstOccur - 30
+                let end = firstOccur + 100
+
+                if (start < 0) {
+                  start = 0
+                }
+
+                if (start === 0) {
+                  end = 100
+                }
+
+                if (end > content.length) {
+                  end = content.length
+                }
+
+                let matchContent = content.substring(start, end)
+
+                // highlight all keywords
+                keywords.forEach(function (keyword) {
+                  const regS = new RegExp(keyword, 'gi')
+                  matchContent = matchContent.replace(regS, '<span class="search-keyword">' + keyword + '</span>')
+                  dataTitle = dataTitle.replace(regS, '<span class="search-keyword">' + keyword + '</span>')
+                })
+
+                str += '<div class="local-search__hit-item"><a href="' + dataUrl + '" class="search-result-title">' + dataTitle + '</a>'
+                count += 1
+
+                if (dataContent !== '') {
+                  str += '<p class="search-result">' + matchContent + '...</p>'
+                }
+              }
+              str += '</div>'
             }
           })
           if (count === 0) {
             str += '<div id="local-search__hits-empty">' + GLOBAL_CONFIG.localSearch.languages.hits_empty.replace(/\$\{query}/, this.value.trim()) +
               '</div>'
           }
+          str += '</div>'
           $resultContent.innerHTML = str
+          window.pjax && window.pjax.refresh($resultContent)
         })
-      }
-    })
+      })
   }
 })
