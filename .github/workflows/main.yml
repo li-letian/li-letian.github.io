@@ -38,10 +38,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
-      - run: cp ./posts ./code/public/blog/posts
-      - run: cp ./posts/image ./code/public/image
-      - run: cp ./assets ./code/public/assets
+      - run: ls
+      - run: cp posts code/public/blog/posts
+      - run: cp posts/image code/public/image
+      - run: cp assets code/public/assets
       - run: cd code
       - run: npm i -g yarn
       - run: yarn install
