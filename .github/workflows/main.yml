@@ -38,17 +38,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - run: mkdir -p code/public/blog/posts
-      - run: cp -r posts code/public/blog/posts
-      - run: mkdir -p code/public/image
-      - run: cp -r posts/image code/public/image
-      - run: mkdir -p code/public/assets
-      - run: cp -r assets code/public/assets
-      - run: ls code/public
-      - run: ls code/public/blog
-      - run: ls code/public/blog/posts
-      - run: ls code/public/blog/posts/toc
-      - run: pwd
+      - run: mkdir -p code/public/blog
+      - run: cp -r posts code/public/blog
+      - run: cp -r posts/image code/public
+      - run: cp -r assets code/public
       - run: npm i -g yarn
       - run: cd code && yarn install
       - run: cd code && npm run export
