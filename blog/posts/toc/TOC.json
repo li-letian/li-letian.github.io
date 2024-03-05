@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Software Architecture",
+    "slug": "software-architecture",
+    "date": "2021-10-01",
+    "description": "Software architecture is the blueprint of a software system.",
+    "rank": 0,
+    "tags": [
+      "software-architecture",
+      "software-design",
+      "software-engineering"
+    ],
+    "cover": "image/software-architecture/1704440485868.png"
+  },
+  {
+    "title": "Cloud Native Development",
+    "slug": "cloud-native-development",
+    "date": "2021-10-02",
+    "description": "Cloud native development is the future of software development.",
+    "rank": 0,
+    "tags": [
+      "cloud-native",
+      "cloud-computing",
+      "software-development"
+    ],
+    "cover": "image/software-architecture/1704440485868.png"
+  },
+  {
+    "title": "Scrum Project Management",
+    "slug": "scrum-project-management",
+    "date": "2021-10-03",
+    "description": "Scrum project management is the most popular agile project management framework.",
+    "rank": 0,
+    "tags": [
+      "scrum",
+      "agile",
+      "project-management"
+    ],
+    "cover": "image/software-architecture/1704440485868.png"
+  },
+  {
+    "title": "Agile Software Quality",
+    "slug": "agile-software-quality",
+    "date": "2021-10-04",
+    "description": "Agile software quality is the most important aspect of software development.",
+    "rank": 0,
+    "tags": [
+      "agile",
+      "software-quality",
+      "software-development"
+    ],
+    "cover": "image/software-architecture/1704440485868.png"
+  }
+]
