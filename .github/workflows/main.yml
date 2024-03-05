@@ -38,17 +38,15 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - run: ls
       - run: mkdir -p code/public/blog/posts
       - run: cp -r posts code/public/blog/posts
       - run: mkdir -p code/public/image
       - run: cp -r posts/image code/public/image
       - run: mkdir -p code/public/assets
       - run: cp -r assets code/public/assets
-      - run: cd code
       - run: npm i -g yarn
-      - run: yarn install
-      - run: npm run export
+      - run: cd code && yarn install
+      - run: cd code && npm run export
       - name: Deploy to GitHub Pages
         if: success() && github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v2
