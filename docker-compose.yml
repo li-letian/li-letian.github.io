@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: homepage.dev.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./code/src:/usr/src/app/src
+
+  prod:
+    build:
+      context: .
+      dockerfile: homepage.prod.Dockerfile
+    volumes:
+      - ./dist/:/usr/src/app/dist
+
+  serve:
+    image: python:3.7
+    volumes:
+      - ./dist/out:/usr/src/app
+    command:
+      ["python", "-m", "http.server", "8000", "--directory", "/usr/src/app"]
+    ports:
+      - 9001:8000

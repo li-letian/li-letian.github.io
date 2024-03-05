@@ -1,0 +1,30 @@
+@use 'sass:math';
+@use 'sass:list';
+
+@function RandomColor($groupNum, $colorStartR,$colorStartG,$colorStartB, $colorEndR,$colorEndG,$colorEndB) {
+    
+  $rStep: ($colorEndR - $colorStartR) / $groupNum;
+  $gStep: ($colorEndG - $colorStartG) / $groupNum;
+  $bStep: ($colorEndB - $colorStartB) / $groupNum;
+
+  @return rgba($colorStartR + $rStep * math.random($groupNum+1)-1, $colorStartG + $gStep * math.random($groupNum+1)-1, $colorStartB + $bStep * math.random($groupNum+1)-1,1);
+}
+
+
+@mixin ItemStyles($groupNum, $colorStartR,$colorStartG,$colorStartB, $colorEndR,$colorEndG,$colorEndB) {
+  $texts: ('text-md', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl');
+  $fonts: ('font-bold', 'font-extrabold', 'font-medium', 'font-semibold', 'font-normal', 'font-bold', 'font-extrabold', 'font-medium');
+
+  $classNames: ();
+  @for $i from 1 through $groupNum {
+    $text: nth($texts, random(length($texts)));
+    $font: nth($fonts, random(length($fonts)));
+    $color: RandomColor($groupNum, $colorStartR,$colorStartG,$colorStartB, $colorEndR,$colorEndG,$colorEndB);
+
+    $className: \[\&\:nth-child(($i+1)n\+1)\]\:$text \[\&\:nth-child(($i+1)n\+1)\]\:$font \[\&\:nth-child(($i+1)n\+1)\]\:$color;
+    $classNames: append($classNames, $className);
+  }
+
+  class-name: $classNames;
+}
+

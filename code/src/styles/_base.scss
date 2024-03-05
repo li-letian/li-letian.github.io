@@ -1,0 +1,7 @@
+:global .container {
+  @apply flex min-h-[100vh] flex-col bg-white px-2 py-0;
+}
+
+:global(.dark) .container {
+  @apply bg-black;
+}
