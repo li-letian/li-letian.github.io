@@ -44,7 +44,7 @@ jobs:
       - run: cp -r posts/image code/public/image
       - run: mkdir -p code/public/assets
       - run: cp -r assets code/public/assets
-      - run: ls code/public/blog/posts/toc
+      - run: ls code/public
       - run: pwd
       - run: npm i -g yarn
       - run: cd code && yarn install
