@@ -2,53 +2,49 @@
   {
     "title": "Software Architecture",
     "slug": "software-architecture",
-    "date": "2021-10-01",
-    "description": "Software architecture is the blueprint of a software system.",
+    "date": "2024-03-05",
+    "description": "Software architecture is the blueprint of a software system. According to my experience, let's have a look at some essential concepts and practices of software architecture.",
     "rank": 0,
     "tags": [
-      "software-architecture",
       "software-design",
       "software-engineering"
     ],
-    "cover": "image/software-architecture/1704440485868.png"
+    "cover": "image/software-architecture/1709713346056.png"
   },
   {
     "title": "Cloud Native Development",
     "slug": "cloud-native-development",
-    "date": "2021-10-02",
-    "description": "Cloud native development is the future of software development.",
+    "date": "2024-03-04",
+    "description": "Cloud Native Development is a software development approach that leverages cloud computing technologies to build highly scalable, resilient, and flexible applications. Instead of relying on traditional on-premises infrastructure, Cloud Native Development harnesses the power of the cloud to enable rapid development, deployment, and scaling of applications.",
     "rank": 0,
     "tags": [
-      "cloud-native",
-      "cloud-computing",
-      "software-development"
+      "cloud-native-development",
+      "software-engineering"
     ],
-    "cover": "image/software-architecture/1704440485868.png"
+    "cover": "image/cloud-native-development/1709725190546.png"
   },
   {
     "title": "Scrum Project Management",
     "slug": "scrum-project-management",
-    "date": "2021-10-03",
-    "description": "Scrum project management is the most popular agile project management framework.",
+    "date": "2024-03-06",
+    "description": "Scrum project management is an agile framework for managing and delivering complex projects. It provides a flexible and iterative approach that enables teams to adapt to changing requirements and deliver value incrementally.",
     "rank": 0,
     "tags": [
-      "scrum",
-      "agile",
-      "project-management"
+      "project-management",
+      "software-engineering"
     ],
-    "cover": "image/software-architecture/1704440485868.png"
+    "cover": "image/scrum-project-management/1709725823472.png"
   },
   {
     "title": "Agile Software Quality",
     "slug": "agile-software-quality",
-    "date": "2021-10-04",
-    "description": "Agile software quality is the most important aspect of software development.",
+    "date": "2024-03-03",
+    "description": "Agile software quality is an approach to software development that emphasizes delivering high-quality software in an iterative and incremental manner. It recognizes the importance of adaptability, collaboration, and continuous improvement in achieving software quality.",
     "rank": 0,
     "tags": [
-      "agile",
-      "software-quality",
-      "software-development"
+      "software-testing",
+      "software-engineering"
     ],
-    "cover": "image/software-architecture/1704440485868.png"
+    "cover": "image/agile-software-quality/1709725561514.png"
   }
 ]

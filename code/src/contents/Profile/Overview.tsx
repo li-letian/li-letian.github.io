@@ -108,16 +108,16 @@ const ButtonsRow = () => {
 
 export const Overview = () => {
   return (
-    <div className="flex w-full flex-auto flex-row content-stretch">
-      <div className="flex-1">
-        <div className="h-full rounded-lg p-4">
-          <img className="max-h-full max-w-full rounded-lg" src="/assets/photo.png" alt={''} />
-        </div>
+    <div className="flex w-full flex-auto flex-col content-stretch md:flex-row">
+      <div className="max-h-[40rem] flex-auto">
+        <img className="max-h-full max-w-full rounded-lg" src="/assets/photo.png" alt={''} />
       </div>
 
-      <div className="-ml-80 flex-1 py-24">
-        <div className="rounded-lg bg-purple-500 p-10 opacity-80">
-          <div className="flex flex-col">
+      <div className="flex flex-grow flex-row md:flex-col">
+        <div className="flex-auto md:min-h-20" />
+        <div className="mt-3 flex flex-shrink flex-row md:my-0 md:-ml-[34rem] lg:-ml-[40rem]">
+          <div className="flex-auto md:min-w-24" />
+          <div className="flex flex-grow flex-col rounded-lg bg-purple-500 p-10 opacity-80 ">
             <TypingRow />
 
             <NameRow />
@@ -126,7 +126,9 @@ export const Overview = () => {
 
             <ButtonsRow />
           </div>
+          <div className="flex-auto md:min-w-24 " />
         </div>
+        <div className="flex-shrink md:min-h-20" />
       </div>
     </div>
   )

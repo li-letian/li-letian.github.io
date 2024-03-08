@@ -34,8 +34,10 @@ export const getStaticProps = (async (context: { params: { slug: string } }) => 
 export default function BlogPost({ md, summary }: { md: MDXRemoteSerializeResult; summary: PostSummary }) {
   return (
     <Main>
-      <BlogItem post={summary} />
-      <Article md={md} />
+      <div className="flex flex-col">
+        <BlogItem post={summary} />
+        <Article md={md} />
+      </div>
     </Main>
   )
 }
